@@ -17,6 +17,12 @@ app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
+// welcome page 
+app.get('/welcome', function(req, res) {
+    // use res.render to load up an ejs view file
+    res.render('pages/welcome');
+});
+
 // team page 
 app.get('/team', function(req, res) {
     // use res.render to load up an ejs view file
