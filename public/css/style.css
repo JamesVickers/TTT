@@ -1,11 +1,32 @@
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
+     
+    
+    
 }
 
-.typing-img {
-    opacity: 0.3;
-}
+.index-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("/img/typing.jpg");
+    filter: grayscale(100%);
+    /*
+    background-image: url("/img/typing.jpg") ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: #999;
+    */
+  }
+
+
+  
+
+
 
 .man-img {
     height: 220px;
