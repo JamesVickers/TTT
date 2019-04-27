@@ -17,12 +17,6 @@ app.get('/', function(req, res) {
     res.render('pages/index');
 });
 
-// welcome page 
-app.get('/welcome', function(req, res) {
-    // use res.render to load up an ejs view file
-    res.render('pages/welcome');
-});
-
 // about page 
 app.get('/about', function(req, res) {
     // use res.render to load up an ejs view file
