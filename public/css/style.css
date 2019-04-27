@@ -1,11 +1,28 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-size: 16px;   
     height: 100vh;   
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 h1 {
     font-family: 'Share Tech Mono', monospace;
+}
+
+main ul,
+.mobile-header-ul,
+.nav-logo-img,
+.footer-flex ul {
+    list-style-type: none;
 }
 
 .desktop-header-ul {
@@ -23,21 +40,25 @@ h1 {
     color: #fff;
 }
 
-.mobile-header-ul{
+.mobile-header-ul {
     display: flex;
     width: 70%;
     margin: 0 auto;
     padding: 0;
-    list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.nav-logo-img {
-    list-style-type: none;
-}
+.logo-text {
+    transform: rotate(-10deg)
+               skew(-15deg);
+  }
+
+  .logo-text h1 {
+      margin: 0;
+  }
 
 .index-wrapper {
     height: 100vh;
@@ -49,7 +70,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
   
 .logo_img,
@@ -61,13 +81,23 @@ h1 {
 .profile-img {
     height: 200px;
     width: 300px;
-    border: solid 10px #113024;
+    border: solid 10px #fff;
     border-radius: 50%;
-}
+    box-shadow: 0px 0px 20px 0px #777777;
 
+}
 
 .desktop-header-ul li:not(.nav-logo-img) {
     display: none;
+}
+
+main,
+.footer-flex ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 
