@@ -46,11 +46,11 @@ body {
 */
 
 
-.man-img {
-    height: 220px;
-    width: 150px;
+.profile-img {
+    height: 200px;
+    width: 300px;
     border: solid 10px #113024;
-    border-radius: 80%;
+    border-radius: 50%;
 }
 
 h1 {
