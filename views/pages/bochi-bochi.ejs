@@ -1,30 +1,29 @@
-
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
 
-    <head>
-        <% include ../partials/head %>
-    </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-    <body>
+    <main>
+      <div class="previous-next-div">
+        <button onclick="location.href='/brewces'">Previous</button>
+        <button onclick="location.href='/web-apps'">Next</button>
+      </div>
+      <h2>Blog sites</h2>
+      <img
+        src="/img/bochi-bochi.png"
+        alt="Bochi-Bochi blog site screenshots from desktop, tablet and mobile devices."
+      />
+    </main>
 
-        <header>
-            <% include ../partials/header %>
-        </header>
-            
-        <main>
-            <div class="previous-next-div">
-                <button onclick="location.href='/brewces'">Previous</button>
-                <button onclick="location.href='/web-apps'">Next</button>
-            </div>
-            <h2>Blog sites</h2>
-            <img src="/img/bochi-bochi.png" alt="Bochi-Bochi blog site screenshots from desktop, tablet and mobile devices.">
-        </main>
-        
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-
-    </body>
-
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+    <% include ../partials/modal %> <%include ../partials/javascript %>
+  </body>
 </html>
