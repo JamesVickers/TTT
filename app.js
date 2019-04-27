@@ -23,10 +23,10 @@ app.get('/welcome', function(req, res) {
     res.render('pages/welcome');
 });
 
-// team page 
-app.get('/team', function(req, res) {
+// about page 
+app.get('/about', function(req, res) {
     // use res.render to load up an ejs view file
-    res.render('pages/team');
+    res.render('pages/about');
 });
 
 // values page
@@ -34,24 +34,34 @@ app.get('/values', function(req, res) {
     res.render('pages/values');
 });
 
-// services page
-app.get('/services', function(req, res) {
-    res.render('pages/services');
+// work page
+app.get('/work', function(req, res) {
+    res.render('pages/work');
 });
 
-// examples page
-app.get('/examples', function(req, res) {
-    res.render('pages/examples');
+// brewces page
+app.get('/brewces', function(req, res) {
+    res.render('pages/brewces');
 });
 
-// services page
-app.get('/details', function(req, res) {
-    res.render('pages/details');
+// bochi-bochi page
+app.get('/bochi-bochi', function(req, res) {
+    res.render('pages/bochi-bochi');
 });
 
-// services page
-app.get('/enquire', function(req, res) {
-    res.render('pages/enquire');
+// web-apps page
+app.get('/web-apps', function(req, res) {
+    res.render('pages/web-apps');
+});
+
+// freelance page
+app.get('/freelance', function(req, res) {
+    res.render('pages/freelance');
+});
+
+// contact page
+app.get('/contact', function(req, res) {
+    res.render('pages/contact');
 });
 
     
