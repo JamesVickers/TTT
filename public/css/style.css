@@ -1,108 +1,120 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;   
-    height: 100vh;   
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: 100vh;
 }
 
 h1 {
-    font-family: 'Share Tech Mono', monospace;
+  font-family: "Share Tech Mono", monospace;
 }
 
 .desktop-header-ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
 .mobile-nav-modal {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background: #332222;
-    color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #332222;
+  color: #fff;
 }
 
-.mobile-header-ul{
+.mobile-header-ul {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-logo-img {
+  list-style-type: none;
+}
+
+.index-wrapper {
+  height: 100vh;
+  background-image: url("/img/trees.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_img,
+.nav-logo {
+  height: 115px;
+  width: 108px;
+}
+
+.profile-img {
+  height: 200px;
+  width: 300px;
+  border: solid 10px #113024;
+  border-radius: 50%;
+}
+
+.desktop-header-ul li:not(.nav-logo-img) {
+  display: none;
+}
+
+/*modal css*/
+.modal-hide {
+  transform: translate(-100%, -100%);
+}
+
+.modal-show {
+  transform: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.95;
+}
+
+@media screen and (min-width: 700px) {
+  .mobile-header-ul {
+    display: none;
+  }
+
+  .desktop-header-ul {
     display: flex;
     width: 70%;
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
+  }
 
-.nav-logo-img {
-    list-style-type: none;
-}
+  .desktop-header-ul li:not(.nav-logo-img) {
+    display: block;
+    height: 25px;
+    border-bottom: 1px solid #777744;
+  }
 
-.index-wrapper {
-    height: 100vh;
-    background-image: url("/img/trees.jpg") ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-size:  cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-  
-.logo_img,
-.nav-logo {
-    height: 115px;
-    width: 108px;
-}
+  /* targets li to left of .nav-log-img */
 
-.profile-img {
-    height: 200px;
-    width: 300px;
-    border: solid 10px #113024;
-    border-radius: 50%;
-}
+  .desktop-header-ul li:nth-child(-n + 2) {
+    padding-left: 30px;
+  }
 
+  /* targets li to right of .nav-log-img */
 
-.desktop-header-ul li:not(.nav-logo-img) {
-    display: none;
-}
-
-
-@media screen and (min-width: 700px) {
-    .mobile-header-ul {
-       display: none;
-    }
-
-    .desktop-header-ul{
-        display: flex;
-        width: 70%;
-        margin: 0 auto;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .desktop-header-ul li:not(.nav-logo-img) {
-        display: block;
-        height: 25px;
-        border-bottom: 1px solid #777744;
-    }
-    
-    /* targets li to left of .nav-log-img */
-
-    .desktop-header-ul li:nth-child(-n+2) {
-        padding-left: 30px;
-    }
-
-    /* targets li to right of .nav-log-img */
-
-    .desktop-header-ul li:nth-child(n+4) {
+  .desktop-header-ul li:nth-child(n + 4) {
     padding-right: 30px;
-    }
+  }
 }
