@@ -8,6 +8,15 @@ body {
 
 main {
     flex: 1 0 auto;
+    height: 100%;
+    background-image: url("/img/sayagata-400px.png") ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -25,6 +34,12 @@ main ul,
     list-style-type: none;
 }
 
+header {
+    background: #171717;
+    color: #fff;
+    box-shadow: 
+}
+
 .desktop-header-ul {
     display: flex;
     margin: 0;
@@ -36,20 +51,21 @@ main ul,
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: #332222;
+    background: grey;
     color: #fff;
 }
 
 .mobile-header-ul {
     display: flex;
-    width: 70%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
+
+
 
 .logo-text {
     transform: rotate(-10deg)
@@ -60,24 +76,8 @@ main ul,
       margin: 0;
   }
 
-.index-wrapper {
-    height: 100vh;
-    background-image: url("/img/trees.jpg") ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-size:  cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-  
-.logo_img,
-.nav-logo {
-    height: 115px;
-    width: 108px;
-}
 
+  
 .profile-img {
     height: 200px;
     width: 300px;
@@ -121,7 +121,13 @@ main,
     .desktop-header-ul li:not(.nav-logo-img) {
         display: block;
         height: 25px;
-        border-bottom: 1px solid #777744;
+        border-bottom: 1px solid #fff;
+    }
+
+    .desktop-header-ul li:not(.nav-logo-img):hover {
+        display: block;
+        height: 25px;
+        border-bottom: 1px solid #FFA123;
     }
     
     /* targets li to left of .nav-log-img */
