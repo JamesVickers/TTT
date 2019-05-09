@@ -9,10 +9,6 @@ body {
 
 main {
     flex: 1 0 auto;
-    background-image: url("/img/sayagata-400px.png") ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-size:  cover;
 }
 
 .main-content {
@@ -22,6 +18,25 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.index-page-hex-include {
+  width: 100%;
+}
+
+.index-page-hex-exclude {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex {
+    position: absolute;
+    height: 700px;
+    bottom: 0;
 }
 
 .desktop-header {
@@ -80,22 +95,18 @@ header {
     color: #fff;
 }
 
-
-
 .desktop-header li:not(.nav-logo) {
     display: none;
 }
 
 .mobile-nav-modal {
-    z-index: 1;
+    position: absolute;
+    z-index: 2;
     width: 100%;
-    height: 100%;
+    flex-grow: 1;
     background: #8F8F8F;
     color: #fff;
-}
-
-.hex {
-    height: 1050px;
+    opacity: 0.7;
 }
 
 .profile-img {
@@ -119,7 +130,9 @@ main,
        display: none;
     }
 
-
+.mobile-nav-modal {
+    background: none;
+}
 
     .desktop-header li:not(.nav-logo) {
         display: block;
