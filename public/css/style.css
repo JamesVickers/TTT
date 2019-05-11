@@ -17,7 +17,24 @@ body {
 }
 
 main {
+    flex-grow: 1;
+    display: flex;
+}
+
+.index-page-content {
     flex: 1 0 auto;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 525px;
+}
+
+.index-page-content h1 {
+    margin-bottom: 30%;
 }
 
 footer {
@@ -33,11 +50,20 @@ h1 {
     font-family: 'Share Tech Mono', monospace;
 }
 
-.hex {
+.hex-pattern-left,
+.hex-pattern-right {
     position: absolute;
-    height: 600px;
-    bottom: 0;
-    opacity: 0.3;
+    bottom: 20px;
+    opacity: 0.15;
+}
+
+.hex-pattern-left {
+    height: 500px;
+}
+
+.hex-pattern-right {
+    height: 370px;
+    right: 20px;
 }
 
 .desktop-header {
