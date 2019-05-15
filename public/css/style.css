@@ -19,10 +19,9 @@ body {
 
 main {
     align-items: center;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 90%;
     max-width: 525px;
-
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -65,6 +64,11 @@ footer ul {
 
 h1 {
     font-family: 'Share Tech Mono', monospace;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
 }
 
 .hex-pattern-left,
@@ -121,6 +125,36 @@ footer ul {
     margin: 0 auto;
     padding: 20px 0;
     border-top:  solid 1px #cfcfcf;
+}
+
+.banner-div {
+    position: relative;
+    text-align: center;
+}
+
+.banner-img {
+    width: 100%;
+    filter: grayscale(1); 
+}
+
+.banner-headline {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stand-out-content-div {
+    border: solid 1px red;
+    align-items: center;
+    width: 100%;
+    max-width: 525px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Modal CSS ************************************************************************/
