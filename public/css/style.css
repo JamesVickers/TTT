@@ -13,31 +13,77 @@ body {
     line-height: 1.5;
     display: flex;
     flex-direction: column;
-    border: 20px solid #CFCFCF;
+    border: 20px solid #FFF;
+    background: #efefef;
 }
 
 main {
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 525px;
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main p {
+    width: 100%;
+}
+
+.index-page-content {
     flex: 1 0 auto;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    max-width: 525px;
 }
 
-footer {
-    background: red;
-    flex-shrink: 0;
+.index-page-content h1 {
+    margin-bottom: 30%;
 }
 
+.mobile-header-ul {
+    height: 100%;
+}
+
+.mobile-header-ul ul,
 footer ul {
     margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-header-ul li {
+    margin-top: 20px;
 }
 
 h1 {
     font-family: 'Share Tech Mono', monospace;
 }
 
-.hex {
+.hex-pattern-left,
+.hex-pattern-right {
     position: absolute;
-    height: 600px;
-    bottom: 0;
-    opacity: 0.3;
+    bottom: 20px;
+    opacity: 0.15;
+}
+
+.hex-pattern-left {
+    /*height: 500px;*/
+    height: 50%;
+    left: 20px;
+}
+
+.hex-pattern-right {
+   /*height: 370px;*/
+    height: 37%;
+    right: 20px;
 }
 
 .desktop-header {
@@ -62,6 +108,19 @@ h1 {
 .profile-img {
     height: 200px;
     width: 200px;
+    border-radius: 50%;
+}
+
+footer {
+    flex-shrink: 0;
+    font-size: 0.75em;
+}
+
+footer ul {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top:  solid 1px #cfcfcf;
 }
 
 /* Modal CSS ************************************************************************/
