@@ -28,6 +28,10 @@ main {
     flex-direction: column;
 }
 
+main p {
+    width: 100%;
+}
+
 .index-page-content {
     flex: 1 0 auto;
     display: flex;
@@ -78,7 +82,7 @@ h1 {
 
 .hex-pattern-right {
    /*height: 370px;*/
-    height: 38%;
+    height: 37%;
     right: 20px;
 }
 
