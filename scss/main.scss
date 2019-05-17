@@ -1,11 +1,13 @@
 /* Sass color variables //////////////////////////////////////////////////////////////*/
+$color-primary: #FFE000;
+$color-secondary: #8CD4FF;
 $color-black: #171717;
-$color-dark-grey: #383838;
-$color-medium-grey: #cfcfcf;
-$color-light-grey: #efefef;
+$color-dark: #383838;
+$color-medium: #cfcfcf;
+$color-light: #efefef;
 $color-white: #ffffff;
-$color-blue: #8CD4FF;
-$color-yellow: #FFE000;
+
+/* Main styles ///////////////////////////////////////////////////////////////////////*/
 
 * {
     box-sizing: border-box;
@@ -23,8 +25,8 @@ body {
     display: flex;
     flex-direction: column;
     border: 20px solid $color-white;
-    background: #efefef;
-    color: $color-dark-grey;
+    background: $color-light;
+    color: $color-dark;
 }
 
 main {
@@ -114,7 +116,7 @@ h2 {
 }
 
 .model-open-arrow {
-    position:absolute;
+    position: absolute;
     z-index: 200;
     top: 20px;
     right: 20px;
@@ -135,7 +137,7 @@ footer ul {
     width: 90%;
     margin: 0 auto;
     padding: 20px 0;
-    border-top:  solid 1px $color-light-grey;
+    border-top:  solid 1px $color-light;
 }
 
 .banner-div {
@@ -181,8 +183,8 @@ footer ul {
     z-index: 300;
     width: 100%;
     height: 100%;
-    border: 20px solid $color-medium-grey;
-    background: $color-dark-grey;
+    border: 20px solid $color-medium;
+    background: $color-dark;
     color: $color-white;
     opacity: 0.7;
 }
