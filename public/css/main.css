@@ -29,17 +29,6 @@ main {
 main p {
   width: 100%; }
 
-.index-page-content {
-  flex: 1 0 auto;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: center;
-  max-width: 525px; }
-
-.index-page-content h1 {
-  margin-bottom: 30%; }
-
 .mobile-header-ul {
   height: 100%; }
 
@@ -56,8 +45,12 @@ footer ul {
   margin-top: 20px; }
 
 h1 {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 2em; }
+
+
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2em;
+  background-color: #ffffff; }
+
 
 h2 {
   font-size: 1.6em; }
@@ -70,12 +63,32 @@ h2 {
 
 .hex-pattern-left {
   /*height: 500px;*/
-  height: 50%;
   left: 20px; }
+
+.hex-pattern-center {
+  background-image: url("../img/hex-center-mobile.png");
+  height: 520px;
+  width: 304px;
+  position: relative; }
+
+.hex-pattern-center-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.hex-pattern-center-text h3 {
+  text-align: center;
+  width: 150px;
+  color: #383838;
+  opacity: 0.6;
+  margin: 0; }
 
 .hex-pattern-right {
   /*height: 370px;*/
-  height: 37%;
   right: 20px; }
 
 .desktop-header {
@@ -180,6 +193,7 @@ footer ul {
   opacity: 0.95; }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
+
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
   #bochi-bochi-img {
@@ -190,7 +204,9 @@ footer ul {
     min-width: 400px;
     min-height: 300px; } }
 
-@media screen and (min-width: 700px) {
+
+@media screen and (min-width: 750px) {
+
   .desktop-header {
     display: flex;
     justify-content: space-around; }
@@ -200,9 +216,11 @@ footer ul {
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-around;
+    width: 350px;
     list-style-type: none;
     padding: 0; }
   .model-open-arrow {
+
     display: none; } }
 
 @media screen and (min-width: 800px) {
@@ -215,3 +233,28 @@ footer ul {
     width: 100%;
     height: 600px;
     background-position: center; } }
+    display: none; }
+  .hex-pattern-center {
+    background-image: url("../img/hex-center-tablet.png");
+    height: 396px;
+    width: 529px; }
+  .hex-pattern-center-text {
+    padding: 14.5%; }
+  .hex-pattern-center-text h3:first-of-type {
+    align-self: flex-start; }
+  .hex-pattern-center-text h3:last-of-type {
+    align-self: flex-end; } }
+
+@media screen and (min-width: 1000px) {
+  .hex-pattern-center {
+    background-image: url("../img/hex-center-desktop.png");
+    height: 304px;
+    width: 520px; }
+  .hex-pattern-center-text {
+    padding: 0;
+    flex-direction: row; }
+  .hex-pattern-center-text h3:first-of-type {
+    align-self: auto; }
+  .hex-pattern-center-text h3:last-of-type {
+    align-self: auto; } }
+
