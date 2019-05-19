@@ -5,27 +5,30 @@
   </head>
 
   <body>
-      <header>
-          <% include ../partials/header %>
-      </header>
-          
-      <main>
-          <div class="previous-next-div">
-              <button onclick="location.href='/freelance'">Previous</button>
-              <button onclick="location.href='/bochi-bochi'">Next</button>
-          </div>
-          <h2>Small business sites</h2>
-          <img src="/img/brewces.png" alt="Brewce's craft ales site screenshots from desktop, tablet and mobile devices.">
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-          <div class="stand-out-content-div">
-            <h3>&quot;I love my new business site because..............&quot;</h3>
-          </div>
-      </main>
-      
-      <footer>
-          <% include ../partials/footer %>
-      </footer>
-      <% include ../partials/modal %> <%include ../partials/javascript %>
+    <main>
+      <div class="previous-next-div">
+        <button onclick="location.href='/freelance'">Previous</button>
+        <button onclick="location.href='/bochi-bochi'">Next</button>
+      </div>
+      <h2>Small business sites</h2>
+      <div id="brewces-img" class="work-img"></div>
+      <!--<img
+        src="/img/brewces2.png"
+        alt="Brewce's craft ales site screenshots from desktop, tablet and mobile devices."
+      />-->
+
+      <div class="stand-out-content-div">
+        <h3>&quot;I love my new business site because..............&quot;</h3>
+      </div>
+    </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+    <% include ../partials/modal %> <%include ../partials/javascript %>
   </body>
-
 </html>
