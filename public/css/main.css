@@ -47,7 +47,7 @@ main p {
   text-align: center; }
 
 .main-title-div h2 {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   margin: 0 auto;
   text-align: center; }
 
@@ -71,7 +71,7 @@ h1 {
   font-size: 2em; }
 
 .title-index {
-  font-family: 'title-font';
+  font-family: "title-font";
   font-size: 7em;
   color: #383838;
   text-shadow: 2px 2px 0px rgba(255, 224, 0, 0.8); }
@@ -132,7 +132,7 @@ footer ul {
   width: 100%; }
 
 .banner-headline {
-  font-family: 'title-font';
+  font-family: "title-font";
   color: #ffffff;
   width: 200px;
   margin: 0;
@@ -173,7 +173,7 @@ footer ul {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 .mobile-nav-modal {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 1.2em;
   z-index: 300;
   width: 100%;
@@ -243,10 +243,11 @@ footer ul {
     display: flex;
     justify-content: space-around; }
   .desktop-header li:hover {
-    color: #8cd4ff; }
+    color: #8cd4ff;
+    cursor: pointer; }
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
-    font-family: 'Abel', sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 1.2em;
     display: flex;
     flex-direction: row;

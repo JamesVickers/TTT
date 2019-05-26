@@ -11,7 +11,7 @@ $color-white: #ffffff;
 
 @font-face {
   font-family: title-font;
-  src: url('../fonts/Vattican.ttf');
+  src: url("../fonts/Vattican.ttf");
 }
 
 * {
@@ -66,7 +66,7 @@ main p {
 }
 
 .main-title-div h2 {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   margin: 0 auto;
   text-align: center;
 }
@@ -95,12 +95,12 @@ h1 {
 }
 
 .title-index {
-    font-family: 'title-font';
-    font-size: 7em;
-    //position: absolute;
-    //z-index: 100;;
-    color: $color-dark;
-    text-shadow: 2px 2px 0px rgba($color-primary, 0.8);
+  font-family: "title-font";
+  font-size: 7em;
+  //position: absolute;
+  //z-index: 100;;
+  color: $color-dark;
+  text-shadow: 2px 2px 0px rgba($color-primary, 0.8);
 }
 
 h2 {
@@ -171,7 +171,7 @@ footer ul {
 }
 
 .banner-headline {
-  font-family: 'title-font';
+  font-family: "title-font";
   color: $color-white;
   width: 200px;
   margin: 0;
@@ -219,7 +219,7 @@ footer ul {
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
 .mobile-nav-modal {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 1.2em;
   z-index: 300;
   width: 100%;
@@ -311,32 +311,32 @@ footer ul {
 }
 
 @media screen and (min-width: 750px) {
-
   .desktop-header {
-      display: flex;
-      justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
   }
 
   .desktop-header li:hover {
     color: $color-secondary;
-}
+    cursor: pointer;
+  }
 
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
-      font-family: 'Abel', sans-serif;
-      font-size: 1.2em;
-      display: flex;
-      flex-direction: row;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: space-around;
-      width: 350px;
-      list-style-type: none;
-      padding: 0;     
+    font-family: "Abel", sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    list-style-type: none;
+    padding: 0;
   }
 
   .model-open-arrow {
-      display: none;
+    display: none;
   }
 }
 
