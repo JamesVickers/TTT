@@ -216,6 +216,17 @@ footer ul {
   min-height: 550px;
 }
 
+.work-text {
+  font-family: "Overpass", sans-serif;
+  list-style: none;
+  font-size: 1.8em;
+  text-align: center;
+}
+.work-text li:hover {
+  color: $color-secondary;
+  cursor: pointer;
+}
+
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
 .mobile-nav-modal {
