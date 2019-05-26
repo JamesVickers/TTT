@@ -92,7 +92,7 @@ footer ul {
 h1 {
   font-family: "Share Tech Mono", monospace;
   font-size: 2em;
-  background-color: $color-white;
+}
 
 .title-index {
     font-family: 'title-font';
@@ -399,6 +399,8 @@ footer ul {
 
   .hex-pattern-center-text h3:last-of-type {
     align-self: flex-end;
+  }
+}
 
 @media screen and (min-width: 900px) {
   h3 {
@@ -425,10 +427,8 @@ footer ul {
   .hex-pattern-center-text h3:last-of-type {
     align-self: auto;
   }
-}
 
   h3 {
     font-size: 1.8em;
   }
 }
-
