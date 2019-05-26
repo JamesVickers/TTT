@@ -35,16 +35,17 @@ body {
 }
 
 h3 {
+  font-family: "title-font";
   font-size: 0.7em;
 }
 
 header {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 main {
   align-items: center;
-  margin: 30px auto;
+  margin: 40px auto;
   width: 90%;
   /*max-width: 525px;*/
   flex-grow: 1;
@@ -53,7 +54,8 @@ main {
 }
 
 main p {
-  width: 100%;
+  width: 80%;
+  max-width: 550px;
 }
 
 .main-title-div {
@@ -162,6 +164,7 @@ footer ul {
 }
 
 .banner-div {
+  margin-bottom: 30px;
   position: relative;
   text-align: center;
 }
@@ -183,20 +186,35 @@ footer ul {
 
 .stand-out-content-div {
   align-items: center;
-  width: 100%;
-  max-width: 525px;
+  width: 80%;
+  max-width: 550px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   background-color: $color-white;
   /*background-image: url("/img/hexellence.png");*/
   border-radius: 5%;
-  margin: 15px 0;
+  margin: 40px 0;
+}
+
+.stand-out-content-div h3 {
+  margin: 40px 0 30px 0;
+}
+
+.stand-out-content-div img {
+  margin-bottom: 30px;
 }
 
 .stand-out-content-div p {
-  width: 90%;
+  width: 80%;
+  margin: 0 0 20px 0;
 }
+
+.stand-out-content-div p:last-child {
+  margin-bottom: 40px;
+}
+
+
 
 /*example work images /////////////////*/
 #bochi-bochi-img {
