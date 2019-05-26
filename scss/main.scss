@@ -43,9 +43,6 @@ main p {
   width: 100%;
 }
 
-
-
-
 .mobile-header-ul {
   height: 100%;
 }
@@ -65,11 +62,9 @@ footer ul {
 }
 
 h1 {
-
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 2em;
-    background-color: $color-white;
-
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2em;
+  background-color: $color-white;
 }
 
 h2 {
@@ -84,29 +79,26 @@ h2 {
 }
 
 .hex-pattern-left {
-
-
-    /*height: 500px;*/
-    left: 20px;
-
+  /*height: 500px;*/
+  left: 20px;
 }
 
 .hex-pattern-center {
-   background-image: url("../img/hex-center-mobile.png"); 
-   height: 520px;
-   width: 304px;
-   position: relative;    
+  background-image: url("../img/hex-center-mobile.png");
+  height: 520px;
+  width: 304px;
+  position: relative;
 }
 
 .hex-pattern-center-text {
-    position: absolute;
-    //top: 50%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  position: absolute;
+  //top: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hex-pattern-center-text h3 {
@@ -119,11 +111,8 @@ h2 {
 }
 
 .hex-pattern-right {
-
-
-   /*height: 370px;*/
-    right: 20px;
-
+  /*height: 370px;*/
+  right: 20px;
 }
 
 .desktop-header {
@@ -235,13 +224,26 @@ footer ul {
 }
 
 .modal-show {
-  transform: none;
+  //transform: translate(0%, 0%);
   position: fixed;
   top: 0%;
   left: 0%;
   height: 100vh;
-  width: 100%;
+  animation-name: animatemodal;
+  animation-duration: 0.5s;
   opacity: 0.95;
+}
+
+/* modal animation/////// */
+@keyframes animatemodal {
+  from {
+    /*opacity: 0.7;*/
+    transform: translate(100%, 0%);
+  }
+  to {
+    /*opacity: 0.95;*/
+    transform: translate(0%, 0%);
+  }
 }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
@@ -263,8 +265,6 @@ footer ul {
   }
 }
 
-
-
 @media screen and (min-width: 800px) {
   /*example work images ///////////////////////////*/
 
@@ -284,72 +284,62 @@ footer ul {
 }
 
 @media screen and (min-width: 750px) {
+  .desktop-header {
+    display: flex;
+    justify-content: space-around;
+  }
 
-    .desktop-header {
-        display: flex;
-        justify-content: space-around;
-    }
+  .desktop-nav-ul-left,
+  .desktop-nav-ul-right {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    width: 350px;
+    list-style-type: none;
+    padding: 0;
+  }
 
-    .desktop-nav-ul-left,
-    .desktop-nav-ul-right {
-        display: flex;
-        flex-direction: row;
-        flex-grow: 1;
-        justify-content: space-around;
-        width: 350px;
-        list-style-type: none;
-        padding: 0;     
-    }
+  .model-open-arrow {
+    display: none;
+  }
 
-    .model-open-arrow {
-        display: none;
-    }
+  .hex-pattern-center {
+    background-image: url("../img/hex-center-tablet.png");
+    height: 396px;
+    width: 529px;
+  }
 
-    .hex-pattern-center {
-        background-image: url("../img/hex-center-tablet.png"); 
-        height: 396px;
-        width: 529px;   
-     }
+  .hex-pattern-center-text {
+    padding: 14.5%;
+  }
 
-     .hex-pattern-center-text {
-         padding: 14.5%;
-     }
+  .hex-pattern-center-text h3:first-of-type {
+    align-self: flex-start;
+  }
 
-     .hex-pattern-center-text h3:first-of-type {
-        align-self: flex-start;
-    
-      }
-
-      .hex-pattern-center-text h3:last-of-type {
-        align-self: flex-end;
-
-      }
-
+  .hex-pattern-center-text h3:last-of-type {
+    align-self: flex-end;
+  }
 }
-
 
 @media screen and (min-width: 1000px) {
-    .hex-pattern-center {
-        background-image: url("../img/hex-center-desktop.png"); 
-        height: 304px;
-        width: 520px;   
-     }
+  .hex-pattern-center {
+    background-image: url("../img/hex-center-desktop.png");
+    height: 304px;
+    width: 520px;
+  }
 
-     .hex-pattern-center-text {
-         padding: 0;
-         flex-direction: row;
-     }
+  .hex-pattern-center-text {
+    padding: 0;
+    flex-direction: row;
+  }
 
-     .hex-pattern-center-text h3:first-of-type {
-        align-self: auto;
-    
-      }
+  .hex-pattern-center-text h3:first-of-type {
+    align-self: auto;
+  }
 
-      .hex-pattern-center-text h3:last-of-type {
-        align-self: auto;
-
-      }
-    
+  .hex-pattern-center-text h3:last-of-type {
+    align-self: auto;
+  }
 }
-
-
