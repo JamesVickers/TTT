@@ -66,11 +66,17 @@ footer ul {
 .mobile-header-ul li {
   margin-top: 20px; }
 
+h1 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2em;
+  background-color: #ffffff; }
+
 .title-index {
   font-family: 'title-font';
   font-size: 7em;
   color: #383838;
   text-shadow: 2px 2px 0px rgba(255, 224, 0, 0.8); }
+
 
 h2 {
   font-size: 1.6em; }
@@ -184,13 +190,22 @@ footer ul {
   display: none; }
 
 .modal-show {
-  transform: none;
   position: fixed;
   top: 0%;
   left: 0%;
   height: 100vh;
-  width: 100%;
+  animation-name: animatemodal;
+  animation-duration: 0.5s;
   opacity: 0.95; }
+
+/* modal animation/////// */
+@keyframes animatemodal {
+  from {
+    /*opacity: 0.7;*/
+    transform: translate(100%, 0%); }
+  to {
+    /*opacity: 0.95;*/
+    transform: translate(0%, 0%); } }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (min-width: 400px) {
