@@ -4,6 +4,10 @@
   font-family: title-font;
   src: url("../fonts/Vattican.ttf"); }
 
+.work-text li img {
+  height: 182px;
+  width: 159px; }
+
 * {
   box-sizing: border-box; }
 
