@@ -44,8 +44,8 @@ app.get('/bochi-bochi', function(req, res) {
 });
 
 // web-apps page
-app.get('/web-apps', function(req, res) {
-    res.render('pages/web-apps');
+app.get('/applications', function(req, res) {
+    res.render('pages/applications');
 });
 
 // freelance page

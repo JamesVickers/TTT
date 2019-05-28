@@ -15,8 +15,8 @@ $color-white: #ffffff;
 }
 
 .work-text li img {
-  height: 182px;
-  width: 159px;
+  height: 205px;
+  width: 179px;
 } 
 
 * {
@@ -242,13 +242,13 @@ footer ul {
 .work-text {
   font-family: "Overpass", sans-serif;
   list-style: none;
-  font-size: 1.8em;
   text-align: center;
 }
 .work-text li:hover {
   color: $color-secondary;
   cursor: pointer;
 }
+
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
