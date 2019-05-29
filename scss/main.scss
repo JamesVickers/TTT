@@ -59,7 +59,7 @@ main {
 }
 
 main p {
-  width: 80%;
+  width: 95%;
   max-width: 550px;
 }
 
@@ -158,14 +158,13 @@ h2 {
 
 footer {
   flex-shrink: 0;
-  font-size: 0.75em;
 }
 
 footer ul {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
-  border-top: solid 1px $color-light;
+  padding: 40px 0;
+  border-top: solid 1px $color-medium;
 }
 
 .banner-div {
@@ -191,7 +190,7 @@ footer ul {
 
 .stand-out-content-div {
   align-items: center;
-  width: 80%;
+  width: 95%;
   max-width: 550px;
   flex-grow: 1;
   display: flex;
@@ -319,6 +318,9 @@ footer ul {
   h3 {
     font-size: 1em;
   }
+  main p {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -341,6 +343,12 @@ footer ul {
 @media screen and (min-width: 650px) {
   h3 {
     font-size: 1.2em;
+  }
+  main p {
+    width: 80%;
+  }
+  .stand-out-content-div {
+    width: 80%;
   }
 }
 
