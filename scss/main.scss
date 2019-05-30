@@ -14,6 +14,11 @@ $color-white: #ffffff;
   src: url("../fonts/Vattican.ttf");
 }
 
+.work-text li img {
+  height: 205px;
+  width: 179px;
+} 
+
 * {
   box-sizing: border-box;
 }
@@ -43,6 +48,10 @@ header {
   margin-top: 30px;
 }
 
+.scroll-icon {
+  margin-bottom: 30px;
+}
+
 main {
   align-items: center;
   margin: 40px auto;
@@ -54,7 +63,7 @@ main {
 }
 
 main p {
-  width: 80%;
+  width: 95%;
   max-width: 550px;
 }
 
@@ -146,25 +155,22 @@ h2 {
 }
 
 .profile-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+  
 }
 
 footer {
   flex-shrink: 0;
-  font-size: 0.75em;
 }
 
 footer ul {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
-  border-top: solid 1px $color-light;
+  padding: 40px 0;
+  border-top: solid 1px $color-medium;
 }
 
 .banner-div {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
   text-align: center;
 }
@@ -186,7 +192,7 @@ footer ul {
 
 .stand-out-content-div {
   align-items: center;
-  width: 80%;
+  width: 95%;
   max-width: 550px;
   flex-grow: 1;
   display: flex;
@@ -237,13 +243,14 @@ footer ul {
 .work-text {
   font-family: "Overpass", sans-serif;
   list-style: none;
-  font-size: 1.8em;
+  padding-left: 0;
   text-align: center;
 }
 .work-text li:hover {
   color: $color-secondary;
   cursor: pointer;
 }
+
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
@@ -314,6 +321,9 @@ footer ul {
   h3 {
     font-size: 1em;
   }
+  main p {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -336,6 +346,12 @@ footer ul {
 @media screen and (min-width: 650px) {
   h3 {
     font-size: 1.2em;
+  }
+  main p {
+    width: 80%;
+  }
+  .stand-out-content-div {
+    width: 80%;
   }
 }
 

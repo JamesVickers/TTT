@@ -4,6 +4,10 @@
   font-family: title-font;
   src: url("../fonts/Vattican.ttf"); }
 
+.work-text li img {
+  height: 205px;
+  width: 179px; }
+
 * {
   box-sizing: border-box; }
 
@@ -28,6 +32,9 @@ h3 {
 header {
   margin-top: 30px; }
 
+.scroll-icon {
+  margin-bottom: 30px; }
+
 main {
   align-items: center;
   margin: 40px auto;
@@ -38,7 +45,7 @@ main {
   flex-direction: column; }
 
 main p {
-  width: 80%;
+  width: 95%;
   max-width: 550px; }
 
 .main-title-div {
@@ -111,23 +118,17 @@ h2 {
   top: 20px;
   right: 20px; }
 
-.profile-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%; }
-
 footer {
-  flex-shrink: 0;
-  font-size: 0.75em; }
+  flex-shrink: 0; }
 
 footer ul {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
-  border-top: solid 1px #efefef; }
+  padding: 40px 0;
+  border-top: solid 1px #cfcfcf; }
 
 .banner-div {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
   text-align: center; }
 
@@ -146,7 +147,7 @@ footer ul {
 
 .stand-out-content-div {
   align-items: center;
-  width: 80%;
+  width: 95%;
   max-width: 550px;
   flex-grow: 1;
   display: flex;
@@ -187,7 +188,7 @@ footer ul {
 .work-text {
   font-family: "Overpass", sans-serif;
   list-style: none;
-  font-size: 1.8em;
+  padding-left: 0;
   text-align: center; }
 
 .work-text li:hover {
@@ -245,7 +246,9 @@ footer ul {
   body {
     font-size: 16px; }
   h3 {
-    font-size: 1em; } }
+    font-size: 1em; }
+  main p {
+    width: 90%; } }
 
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
@@ -259,7 +262,11 @@ footer ul {
 
 @media screen and (min-width: 650px) {
   h3 {
-    font-size: 1.2em; } }
+    font-size: 1.2em; }
+  main p {
+    width: 80%; }
+  .stand-out-content-div {
+    width: 80%; } }
 
 @media screen and (min-width: 750px) {
   .desktop-header {
