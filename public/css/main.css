@@ -32,6 +32,9 @@ h3 {
 header {
   margin-top: 30px; }
 
+.scroll-icon {
+  margin-bottom: 30px; }
+
 main {
   align-items: center;
   margin: 40px auto;
@@ -115,11 +118,6 @@ h2 {
   top: 20px;
   right: 20px; }
 
-.profile-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%; }
-
 footer {
   flex-shrink: 0; }
 
@@ -130,7 +128,7 @@ footer ul {
   border-top: solid 1px #cfcfcf; }
 
 .banner-div {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
   text-align: center; }
 
@@ -190,6 +188,7 @@ footer ul {
 .work-text {
   font-family: "Overpass", sans-serif;
   list-style: none;
+  padding-left: 0;
   text-align: center; }
 
 .work-text li:hover {
