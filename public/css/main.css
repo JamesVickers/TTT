@@ -189,10 +189,6 @@ main p {
   display: flex;
   justify-content: space-between; }
 
-.stand-out-content-div a {
-  padding: 30px; }
-
-/*example work images /////////////////*/
 .previous-next-button-div button:first-of-type {
   position: fixed;
   top: 50%;
@@ -203,6 +199,10 @@ main p {
   top: 50%;
   right: 20px; }
 
+.stand-out-content-div a {
+  padding: 30px; }
+
+/*example work images /////////////////*/
 #bochi-bochi-img {
   background-image: url("../img/bochi-bochi-mobile.png"); }
 
@@ -236,11 +236,6 @@ main p {
 .work-text a:hover > img {
   transform: scale(1.1); }
 
-/* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
-.mobile-nav-modal {
-  font-family: "Abel", sans-serif;
-  font-size: 1.2em;
-  z-index: 300;
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
 #first-spacing-div {
   margin-top: 24px;
