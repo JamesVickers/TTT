@@ -90,24 +90,6 @@ header {
   margin-top: 30px;
 }
 
-.mobile-header-ul {
-  height: 100%;
-}
-
-.mobile-header-ul ul,
-footer ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mobile-header-ul li {
-  margin-top: 20px;
-}
-
 .desktop-header {
   max-width: 800px;
   margin: 0 auto;
@@ -122,11 +104,12 @@ footer ul {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
-.model-open-arrow {
+.model-image-open,
+.model-image-close {
   position: absolute;
   z-index: 200;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 40px;
 }
 
 .mobile-nav-modal {
@@ -139,6 +122,22 @@ footer ul {
   background: $color-dark;
   color: $color-white;
   opacity: 0.7;
+}
+
+.mobile-nav-modal ul,
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-nav-modal ul {
+  height: 100%;
+  padding: 200px 0;
+  justify-content: space-around;
 }
 
 .modal-hide {
@@ -232,18 +231,9 @@ main p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-
-.previous-next-button-div button:first-of-type {
+  padding: 0 20px;
   position: fixed;
   top: 50%;
-  left: 20px;
-}
-
-.previous-next-button-div button:last-of-type {
-  position: fixed;
-  top: 50%;
-  right: 20px;
 }
 
 .stand-out-content-div a {
@@ -451,7 +441,7 @@ footer ul {
     padding: 0;
   }
 
-  .model-open-arrow {
+  .model-image-open {
     display: none;
   }
 }
@@ -499,7 +489,7 @@ footer ul {
     padding: 0;
   }
 
-  .model-open-arrow {
+  .model-image-open {
     display: none;
   }
 
