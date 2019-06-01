@@ -1,18 +1,31 @@
 /* Sass color variables //////////////////////////////////////////////////////////////*/
-/* Main styles ///////////////////////////////////////////////////////////////////////*/
+/* Main styles ///////////////////////////////////////////////////////////////////////////*/
 @font-face {
   font-family: title-font;
   src: url("../fonts/Vattican.ttf"); }
-
-.work-text li img {
-  height: 205px;
-  width: 179px; }
 
 * {
   box-sizing: border-box; }
 
 html {
   min-height: 100%; }
+
+h1 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2em; }
+
+h2,
+h3 {
+  font-family: "title-font";
+  margin-top: 30px; }
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+h3 {
+  font-size: 1em;
+  margin-bottom: 30px; }
 
 body {
   min-height: 100vh;
@@ -25,40 +38,30 @@ body {
   background: #efefef;
   color: #383838; }
 
-h3 {
+/* Title page css /////////////////////////////////////////////////////////////////*/
+.title-index {
   font-family: "title-font";
-  font-size: 0.7em; }
+  font-size: 7em;
+  color: #383838;
+  text-shadow: 2px 2px 0px rgba(255, 224, 0, 0.8); }
 
+.hex-pattern-left,
+.hex-pattern-right {
+  position: absolute;
+  bottom: 20px;
+  opacity: 0.15; }
+
+.hex-pattern-left {
+  /*height: 500px;*/
+  left: 20px; }
+
+.hex-pattern-right {
+  /*height: 370px;*/
+  right: 20px; }
+
+/* Header css ///////////////////////////////////////////////////////////////////////*/
 header {
   margin-top: 30px; }
-
-.scroll-icon {
-  margin-bottom: 30px; }
-
-main {
-  align-items: center;
-  margin: 40px auto;
-  width: 90%;
-  /*max-width: 525px;*/
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column; }
-
-main p {
-  width: 95%;
-  max-width: 550px; }
-
-.main-title-div {
-  margin: auto; }
-
-.main-title-div h1 {
-  margin: 0;
-  text-align: center; }
-
-.main-title-div h2 {
-  font-family: "Abel", sans-serif;
-  margin: 0 auto;
-  text-align: center; }
 
 .mobile-header-ul {
   height: 100%; }
@@ -75,33 +78,6 @@ footer ul {
 .mobile-header-ul li {
   margin-top: 20px; }
 
-h1 {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 2em; }
-
-.title-index {
-  font-family: "title-font";
-  font-size: 7em;
-  color: #383838;
-  text-shadow: 2px 2px 0px rgba(255, 224, 0, 0.8); }
-
-h2 {
-  font-size: 1.6em; }
-
-.hex-pattern-left,
-.hex-pattern-right {
-  position: absolute;
-  bottom: 20px;
-  opacity: 0.15; }
-
-.hex-pattern-left {
-  /*height: 500px;*/
-  left: 20px; }
-
-.hex-pattern-right {
-  /*height: 370px;*/
-  right: 20px; }
-
 .desktop-header {
   max-width: 800px;
   margin: 0 auto;
@@ -112,20 +88,55 @@ h2 {
 .desktop-nav-ul-right {
   display: none; }
 
+/* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 .model-open-arrow {
   position: absolute;
   z-index: 200;
   top: 20px;
   right: 20px; }
 
-footer {
-  flex-shrink: 0; }
+.mobile-nav-modal {
+  font-family: "Abel", sans-serif;
+  font-size: 1.2em;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  border: 20px solid #cfcfcf;
+  background: #383838;
+  color: #ffffff;
+  opacity: 0.7; }
 
-footer ul {
+.modal-hide {
+  transform: translate(-100%, -100%);
+  display: none; }
+
+.modal-show {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  animation-name: animatemodal;
+  animation-duration: 0.5s;
+  opacity: 0.95; }
+
+/* modal animation/////// */
+@keyframes animatemodal {
+  from {
+    /*opacity: 0.7;*/
+    transform: translate(100%, 0%); }
+  to {
+    /*opacity: 0.95;*/
+    transform: translate(0%, 0%); } }
+
+/* Main page css /////////////////////////////////////////////////////////////////////////////////////*/
+main {
+  align-items: center;
+  margin: 40px auto;
   width: 90%;
-  margin: 0 auto;
-  padding: 40px 0;
-  border-top: solid 1px #cfcfcf; }
+  /*max-width: 525px;*/
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; }
 
 .banner-div {
   margin-bottom: 40px;
@@ -145,8 +156,10 @@ footer ul {
   left: 13.5%;
   transform: translate(-50%, -50%); }
 
-.stand-out-content-div {
-  align-items: center;
+.scroll-icon {
+  margin-bottom: 30px; }
+
+main p {
   width: 95%;
   max-width: 550px;
   flex-grow: 1;
@@ -156,24 +169,40 @@ footer ul {
   /*background-image: url("/img/hexellence.png");*/
   border-radius: 5%;
   margin: 40px auto; }
+  max-width: 550px; }
 
-.stand-out-content-div h3 {
-  margin: 40px 0 30px 0; }
+.main-title-div {
+  margin: auto; }
 
-.stand-out-content-div img {
-  margin-bottom: 30px; }
+.main-title-div h1 {
+  margin: 0;
+  text-align: center; }
 
-.stand-out-content-div p {
-  width: 80%;
-  margin: 0 0 20px 0; }
+.main-title-div h2 {
+  font-family: "Abel", sans-serif;
+  margin: 0 auto;
+  text-align: center; }
 
-.stand-out-content-div p:last-child {
-  margin-bottom: 40px; }
+/* Example work images /////////////////////////////////////////////////////////////////////////////*/
+.previous-next-button-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
 
 .stand-out-content-div a {
   padding: 30px; }
 
 /*example work images /////////////////*/
+.previous-next-button-div button:first-of-type {
+  position: fixed;
+  top: 50%;
+  left: 20px; }
+
+.previous-next-button-div button:last-of-type {
+  position: fixed;
+  top: 50%;
+  right: 20px; }
+
 #bochi-bochi-img {
   background-image: url("../img/bochi-bochi-mobile.png"); }
 
@@ -212,53 +241,75 @@ footer ul {
   font-family: "Abel", sans-serif;
   font-size: 1.2em;
   z-index: 300;
+/* reusable div css //////////////////////////////////////////////////////////////////////////*/
+#first-spacing-div {
+  margin-top: 24px;
+  margin-bottom: 10px; }
+
+.spacing-div {
   width: 100%;
-  height: 100%;
-  border: 20px solid #cfcfcf;
-  background: #383838;
-  color: #ffffff;
-  opacity: 0.7; }
+  display: flex;
+  justify-content: center; }
 
-.modal-hide {
-  transform: translate(-100%, -100%);
-  display: none; }
+.stand-out-content-div {
+  align-items: center;
+  width: 95%;
+  max-width: 550px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  /*background-image: url("/img/hexellence.png");*/
+  border-radius: 5%;
+  margin: 40px auto; }
 
-.modal-show {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  height: 100vh;
-  animation-name: animatemodal;
-  animation-duration: 0.5s;
-  opacity: 0.95; }
+.stand-out-content-div h3 {
+  margin: 30px 0 30px 0; }
 
-/* modal animation/////// */
-@keyframes animatemodal {
-  from {
-    /*opacity: 0.7;*/
-    transform: translate(100%, 0%); }
-  to {
-    /*opacity: 0.95;*/
-    transform: translate(0%, 0%); } }
+.stand-out-content-div img {
+  margin-bottom: 30px; }
+
+.stand-out-content-div p {
+  width: 80%;
+  margin: 0 0 20px 0; }
+
+.stand-out-content-div p:last-child {
+  margin-bottom: 30px; }
+
+/* footer css ///////////////////////////////////////////////////////////////////////////*/
+footer {
+  flex-shrink: 0; }
+
+footer ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-top: solid 1px #cfcfcf; }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (min-width: 400px) {
   body {
     font-size: 14px; }
+  h2 {
+    font-size: 1.4em; }
   h3 {
-    font-size: 0.8em; } }
+    font-size: 1.2em; } }
 
 @media screen and (min-width: 475px) {
   body {
     font-size: 16px; }
+  h2 {
+    font-size: 1.6em; }
   h3 {
-    font-size: 0.8em; } }
+    font-size: 1.3em; } }
 
 @media screen and (min-width: 550px) {
   body {
     font-size: 16px; }
+  h2 {
+    font-size: 1.8em; }
   h3 {
-    font-size: 1em; }
+    font-size: 1.4em; }
   main p {
     width: 90%; } }
 
@@ -273,8 +324,10 @@ footer ul {
     min-height: 300px; } }
 
 @media screen and (min-width: 650px) {
+  h2 {
+    font-size: 1.9em; }
   h3 {
-    font-size: 1.2em; }
+    font-size: 1.5em; }
   main p {
     width: 80%; }
   .stand-out-content-div {
@@ -304,8 +357,10 @@ footer ul {
 
 @media screen and (min-width: 800px) {
   /*example work images ///////////////////////////*/
+  h2 {
+    font-size: 2em; }
   h3 {
-    font-size: 1.5em; }
+    font-size: 1.6em; }
   #bochi-bochi-img {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
@@ -341,10 +396,6 @@ footer ul {
   .hex-pattern-center-text h3:last-of-type {
     align-self: flex-end; } }
 
-@media screen and (min-width: 900px) {
-  h3 {
-    font-size: 1.6em; } }
-
 @media screen and (min-width: 1000px) {
   .hex-pattern-center {
     background-image: url("../img/hex-center-desktop.png");
@@ -356,9 +407,7 @@ footer ul {
   .hex-pattern-center-text h3:first-of-type {
     align-self: auto; }
   .hex-pattern-center-text h3:last-of-type {
-    align-self: auto; }
-  h3 {
-    font-size: 1.8em; } }
+    align-self: auto; } }
 
 @media screen and (min-width: 1260px) {
   .work-text {
