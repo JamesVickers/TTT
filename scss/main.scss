@@ -104,12 +104,18 @@ header {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
-.model-image-open,
-.model-image-close {
+.model-image-open {
   position: absolute;
   z-index: 200;
   top: 50px;
   right: 40px;
+}
+
+.model-image-close {
+  position: absolute;
+  z-index: 200;
+  top: 32px;
+  right: 35px;
 }
 
 .model-image-open:hover,
@@ -179,7 +185,7 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 40px auto;
+  margin: 60px auto 100px auto;
   width: 90%;
   /*max-width: 525px;*/
   flex-grow: 1;
@@ -269,6 +275,10 @@ main p {
   flex-grow: 2;
   min-width: 320px;
   min-height: 550px;
+}
+
+.work-intro-text {
+  text-align: center;
 }
 
 .work-text {
