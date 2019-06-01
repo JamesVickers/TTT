@@ -104,12 +104,25 @@ header {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
-.model-image-open,
-.model-image-close {
+.model-image-open {
   position: absolute;
   z-index: 200;
   top: 50px;
   right: 40px;
+}
+
+.model-image-close {
+  position: absolute;
+  z-index: 200;
+  top: 32px;
+  right: 35px;
+}
+
+.model-image-open:hover,
+.model-image-close:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 
 .mobile-nav-modal {
@@ -172,7 +185,7 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 40px auto;
+  margin: 60px auto 100px auto;
   width: 90%;
   /*max-width: 525px;*/
   flex-grow: 1;
@@ -231,9 +244,16 @@ main p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 40px;
   position: fixed;
   top: 50%;
+}
+
+#previous-button:hover,
+#next-button:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 
 .stand-out-content-div a {
@@ -257,6 +277,10 @@ main p {
   min-height: 550px;
 }
 
+.work-intro-text {
+  text-align: center;
+}
+
 .work-text {
   font-family: "Overpass", sans-serif;
   text-align: center;
@@ -273,11 +297,14 @@ main p {
 }
 
 .work-text a:hover {
-  color: $color-secondary;
   cursor: pointer;
+  color: $color-secondary;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 
 .work-text a:hover > img {
+  cursor: pointer;
   transform: scale(1.1);
 }
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
@@ -423,8 +450,8 @@ footer ul {
   }
 
   .desktop-header li:hover {
-    color: $color-secondary;
     cursor: pointer;
+    color: $color-secondary;
   }
 
   .desktop-nav-ul-left,
