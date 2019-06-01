@@ -112,6 +112,13 @@ header {
   right: 40px;
 }
 
+.model-image-open:hover,
+.model-image-close:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
 .mobile-nav-modal {
   font-family: "Abel", sans-serif;
   font-size: 1.2em;
@@ -231,9 +238,16 @@ main p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 40px;
   position: fixed;
   top: 50%;
+}
+
+#previous-button:hover,
+#next-button:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 
 .stand-out-content-div a {
@@ -273,11 +287,14 @@ main p {
 }
 
 .work-text a:hover {
-  color: $color-secondary;
   cursor: pointer;
+  color: $color-secondary;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
 
 .work-text a:hover > img {
+  cursor: pointer;
   transform: scale(1.1);
 }
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
@@ -423,8 +440,8 @@ footer ul {
   }
 
   .desktop-header li:hover {
-    color: $color-secondary;
     cursor: pointer;
+    color: $color-secondary;
   }
 
   .desktop-nav-ul-left,
