@@ -179,17 +179,10 @@ main p {
 .previous-next-button-div {
   width: 100%;
   display: flex;
-  justify-content: space-between; }
-
-.previous-next-button-div button:first-of-type {
+  justify-content: space-between;
+  padding: 0 20px;
   position: fixed;
-  top: 50%;
-  left: 20px; }
-
-.previous-next-button-div button:last-of-type {
-  position: fixed;
-  top: 50%;
-  right: 20px; }
+  top: 50%; }
 
 .stand-out-content-div a {
   padding: 30px; }
