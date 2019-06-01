@@ -161,14 +161,6 @@ main {
 
 main p {
   width: 95%;
-  max-width: 550px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  /*background-image: url("/img/hexellence.png");*/
-  border-radius: 5%;
-  margin: 40px auto; }
   max-width: 550px; }
 
 .main-title-div {
