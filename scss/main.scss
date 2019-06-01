@@ -17,7 +17,7 @@ $color-white: #ffffff;
 .work-text li img {
   height: 205px;
   width: 179px;
-} 
+}
 
 * {
   box-sizing: border-box;
@@ -155,7 +155,6 @@ h2 {
 }
 
 .profile-img {
-  
 }
 
 footer {
@@ -200,7 +199,7 @@ footer ul {
   background-color: $color-white;
   /*background-image: url("/img/hexellence.png");*/
   border-radius: 5%;
-  margin: 40px 0;
+  margin: 40px auto;
 }
 
 .stand-out-content-div h3 {
@@ -220,8 +219,9 @@ footer ul {
   margin-bottom: 40px;
 }
 
-
-
+.stand-out-content-div a {
+  padding: 30px;
+}
 /*example work images /////////////////*/
 #bochi-bochi-img {
   background-image: url("../img/bochi-bochi-mobile.png");
@@ -242,15 +242,27 @@ footer ul {
 
 .work-text {
   font-family: "Overpass", sans-serif;
-  list-style: none;
-  padding-left: 0;
   text-align: center;
 }
-.work-text li:hover {
+
+.work-text a {
+  text-decoration: none;
+  color: $color-dark;
+}
+
+.work-text a > img {
+  max-width: 250px;
+  transition: transform 0.2s;
+}
+
+.work-text a:hover {
   color: $color-secondary;
   cursor: pointer;
 }
 
+.work-text a:hover > img {
+  transform: scale(1.1);
+}
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
@@ -475,5 +487,15 @@ footer ul {
 
   h3 {
     font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .work-text {
+    display: flex;
+  }
+
+  .work-text > .stand-out-content-div {
+    margin: 40px 10px;
   }
 }

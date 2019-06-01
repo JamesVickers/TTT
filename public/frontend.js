@@ -29,3 +29,33 @@ $(window).resize(function() {
     hideModal();
   }
 });
+
+///change work button images from greyscale to color on hover
+function switchButtonImage(id, url) {
+  $("#" + id).attr("src", url);
+}
+
+$(".banner-img")
+  .closest("div")
+  .on("mouseover", function() {
+    var target = $(this)
+      .find(".banner-img")
+      .attr("id")
+      .replace("-button", "");
+    var source = "/img/hex-" + target + "-button-yellow.png";
+    $(this)
+      .find(".banner-img")
+      .attr("src", source);
+  });
+$(".banner-img")
+  .closest("div")
+  .on("mouseout", function() {
+    var target = $(this)
+      .find(".banner-img")
+      .attr("id")
+      .replace("-button", "");
+    var source = "/img/hex-" + target + "-button-yellow-grey.png";
+    $(this)
+      .find(".banner-img")
+      .attr("src", source);
+  });
