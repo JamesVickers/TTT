@@ -124,22 +124,28 @@ header {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 
-.model-image-open {
+.modal-image-open,
+.modal-image-close {
+  width: 48px;
+  height: 56px;
+}
+
+.modal-image-open {
   position: absolute;
   z-index: 200;
   top: 50px;
   right: 40px;
 }
 
-.model-image-close {
+.modal-image-close {
   position: absolute;
   z-index: 200;
   top: 32px;
   right: 35px;
 }
 
-.model-image-open:hover,
-.model-image-close:hover {
+.modal-image-open:hover,
+.modal-image-close:hover {
   cursor: pointer;
   transition: transform 0.2s;
   transform: scale(1.1);
@@ -371,13 +377,18 @@ footer ul {
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 400px) {
-
   h2 {
     font-size: 1.35em;
   }
 
   h3 {
     font-size: 1.2em;
+  }
+
+  .modal-image-open,
+  .modal-image-close {
+    width: 56px;
+    height: 65px;
   }
 
    .main-title-div h1 {
@@ -408,6 +419,11 @@ footer ul {
   
   .main-title-div h2 {
     font-size: 1.4em;
+  }
+
+  .desktop-nav-ul-left,
+  .desktop-nav-ul-right {
+    font-size: 1.2em;
   }
 
   .hex-pattern-left {
@@ -447,6 +463,12 @@ footer ul {
 
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
+
+  .modal-image-open,
+  .modal-image-close {
+    width: 64px;
+    height: 74px;
+  }
 
   .hex-pattern-left {
     /* 3/4 img width and height */
@@ -504,7 +526,6 @@ footer ul {
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-family: "Abel", sans-serif;
-    font-size: 1.2em;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
@@ -515,9 +536,10 @@ footer ul {
     padding: 0;
   }
 
-  .model-image-open {
+  .modal-image-open {
     display: none;
   }
+}
 
 @media screen and (min-width: 800px) {
   /*example work images ///////////////////////////*/
@@ -569,6 +591,20 @@ footer ul {
 }
 
 @media screen and (min-width: 1260px) {
+  .main-title-div h1 {
+    font-size: 6.5em;
+  }
+  
+  .main-title-div h2 {
+    font-size: 1.8em;
+    width: 600px;
+  }
+
+  .desktop-nav-ul-left,
+  .desktop-nav-ul-right {
+    font-size: 1.4em;
+  }
+
   .work-text {
     display: flex;
   }
