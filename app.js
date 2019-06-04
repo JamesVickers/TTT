@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const bodyParser = require('body-parser');
 
 // set location for static files like .css
 app.use(express.static(__dirname + '/public'))
@@ -8,6 +8,10 @@ app.use(express.static(__dirname + '/public'))
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Routes *************************************************************************************
 
@@ -56,6 +60,22 @@ app.get('/freelance', function(req, res) {
 // contact page
 app.get('/contact', function(req, res) {
     res.render('pages/contact');
+});
+
+// Enquiry form
+app.post('/send', (req, res) => {
+    const output = `
+        <p>You have a new contact message</p>
+        <h3>Contact Details</h3>
+        <ul>
+            <li>Name: ${req.body.name}</li>
+            <li>Company: ${req.body.company}</li>
+            <li>Email: ${req.body.email}</li>
+            <li>Telephone: ${req.body.telephone}</li>
+        </ul>
+        <h3>Message</h3>
+        <p>${req.body.message}</p>
+    `;
 });
 
     

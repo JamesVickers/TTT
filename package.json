@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "node-sass": "^4.12.0"
