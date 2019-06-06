@@ -65,7 +65,10 @@ app.get('/contact', function(req, res) {
 
 // Enquiry form
 app.post('/send', (req, res) => {
-    const output = `
+
+    async function sendEmail() {
+
+        const output = `
         <p>You have a new contact message</p>
         <h3>Contact Details</h3>
         <ul>
@@ -76,61 +79,56 @@ app.post('/send', (req, res) => {
         </ul>
         <h3>Message</h3>
         <p>${req.body.message}</p>
-    `;
+        `;
+        
+        // youremailprogram.js
+        const nodemailer = require("nodemailer");
+        const { google } = require("googleapis");
+        const OAuth2 = google.auth.OAuth2;
+
+
+        // clientID, client secret, redirect url
+        const oauth2Client = new OAuth2(
+            "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
+            "oxB9q4kbBA_WMgO8h11cYTkW",
+            "https://developers.google.com/oauthplayground" // Redirect URL
+        );
+
+        oauth2Client.setCredentials({
+            refresh_token: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
+            });
+        const tokens = await oauth2Client.refreshAccessToken()
+        const accessToken = tokens.credentials.access_token
+
+        const smtpTransport = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                type: "OAuth2",
+                user: "jvickersdesign@gmail.com", 
+                clientId: "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
+                clientSecret: "oxB9q4kbBA_WMgO8h11cYTkW",
+                refreshToken: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_",
+                accessToken: accessToken
+            }
+        });
+
+        const mailOptions = {
+            from: "jvickersdesign@gmail.com",
+            to: "jvickersdesign@gmail.com",
+            subject: "New customer enquiry for Treetops Tech - Secure OAuth",
+            generateTextFromHTML: true,
+            html: output
+            };
+
+        smtpTransport.sendMail(mailOptions, (error, response) => {
+                error ? console.log(error) : console.log(response);
+                smtpTransport.close();
+            });
+    } // That last brace is to close off our async function
+        
+    sendEmail(); 
+    res.render('pages/thank-you');
 });
-
-async function sendEmail() {
-    // youremailprogram.js
-    const nodemailer = require("nodemailer");
-    const { google } = require("googleapis");
-    const OAuth2 = google.auth.OAuth2;
-
-
-    // clientID, client secret, redirect url
-    const oauth2Client = new OAuth2(
-        "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
-          "oxB9q4kbBA_WMgO8h11cYTkW",
-        "https://developers.google.com/oauthplayground" // Redirect URL
-   );
-
-   oauth2Client.setCredentials({
-        refresh_token: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
-        });
-    const tokens = await oauth2Client.refreshAccessToken()
-    const accessToken = tokens.credentials.access_token
-
-
-    const smtpTransport = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-             type: "OAuth2",
-             user: "jvickersdesign@gmail.com", 
-             clientId: "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
-             clientSecret: "oxB9q4kbBA_WMgO8h11cYTkW",
-             refreshToken: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_",
-             accessToken: accessToken
-        }
-   });
-
-   const mailOptions = {
-    from: "jvickersdesign@gmail.com",
-    to: "jvickersdesign@gmail.com",
-    subject: "Node.js Email with Secure OAuth",
-    generateTextFromHTML: true,
-    html: "<b>Hi test email from TTT</b>"
-    };
-
-    smtpTransport.sendMail(mailOptions, (error, response) => {
-            error ? console.log(error) : console.log(response);
-            smtpTransport.close();
-        });
-} // That last brace is to close off our async function
-    
-sendEmail();
-
-
-
-
 
     
 // listen on port 3000
