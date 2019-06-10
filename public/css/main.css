@@ -293,6 +293,27 @@ main p {
 .stand-out-content-div p:last-child {
   margin-bottom: 30px; }
 
+/* contact form css //////////////////////////////////////////////////////////////////*/
+form {
+  border: solid 1px red; }
+
+form ul {
+  list-style-type: none;
+  padding: 0;
+  border: solid 1px blue; }
+
+form li {
+  display: flex;
+  justify-content: space-between; }
+
+form input {
+  border: 1.5px solid #cfcfcf;
+  padding: 5px; }
+
+form input:focus {
+  outline: none;
+  border: 3px solid #8cd4ff; }
+
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
   flex-shrink: 0; }
@@ -301,7 +322,7 @@ footer ul {
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
-  border-top: solid 1px #cfcfcf; }
+  border-top: solid 1.5px #cfcfcf; }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (min-width: 400px) {

@@ -361,6 +361,34 @@ main p {
   margin-bottom: 30px;
 }
 
+/* contact form css //////////////////////////////////////////////////////////////////*/
+
+form {
+ 
+ border: solid 1px red;
+}
+
+form ul {
+  list-style-type: none;
+  padding: 0;
+  border: solid 1px blue;
+}
+
+form li {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  border: 1.5px solid $color-medium;  
+  padding: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border: 3px solid $color-secondary;  
+}
+
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 
 footer {
@@ -371,7 +399,7 @@ footer ul {
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
-  border-top: solid 1px $color-medium;
+  border-top: solid 1.5px $color-medium;
 }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
