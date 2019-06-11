@@ -295,24 +295,37 @@ main p {
 
 /* contact form css //////////////////////////////////////////////////////////////////*/
 form {
-  border: solid 1px red; }
+  width: 90%; }
 
 form ul {
   list-style-type: none;
-  padding: 0;
-  border: solid 1px blue; }
+  padding: 0; }
 
 form li {
   display: flex;
-  justify-content: space-between; }
+  flex-direction: column;
+  margin-bottom: 20px; }
 
-form input {
+form input,
+form textarea {
+  padding: 5px;
   border: 1.5px solid #cfcfcf;
-  padding: 5px; }
+  border-radius: 5px; }
 
-form input:focus {
+form input:focus,
+form textarea:focus {
   outline: none;
   border: 3px solid #8cd4ff; }
+
+button[type=submit] {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  background: #ffe000;
+  border: none;
+  color: #383838; }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
@@ -339,7 +352,9 @@ footer ul {
     margin-bottom: 10px; }
   .main-title-div h2 {
     font-size: 1.35em;
-    width: 210px; } }
+    width: 210px; }
+  form {
+    width: 80%; } }
 
 @media screen and (min-width: 475px) {
   h2 {
@@ -425,7 +440,9 @@ footer ul {
     list-style-type: none;
     padding: 0; }
   .modal-image-open {
-    display: none; } }
+    display: none; }
+  form {
+    width: 70%; } }
 
 @media screen and (min-width: 800px) {
   /*example work images ///////////////////////////*/

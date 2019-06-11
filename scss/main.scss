@@ -364,29 +364,47 @@ main p {
 /* contact form css //////////////////////////////////////////////////////////////////*/
 
 form {
- 
- border: solid 1px red;
+ width: 90%;
 }
 
 form ul {
   list-style-type: none;
   padding: 0;
-  border: solid 1px blue;
+ 
 }
 
 form li {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-form input {
-  border: 1.5px solid $color-medium;  
+form input,
+form textarea {
   padding: 5px;
+  border: 1.5px solid $color-medium;  
+  border-radius: 5px;
 }
 
-form input:focus {
+form input:focus,
+form textarea:focus {
   outline: none;
   border: 3px solid $color-secondary;  
+}
+
+form h3 {
+  ///////////////////// finish this out to center text /////////////////////////*///
+}
+
+button[type=submit] {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  background: $color-primary;
+  border: none;
+  color: $color-dark;
 }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
@@ -428,7 +446,10 @@ footer ul {
     font-size: 1.35em;
     width: 210px;
   }
-  
+
+  form {
+    width: 80%;
+   }
 }
 
 @media screen and (min-width: 475px) {
@@ -567,6 +588,10 @@ footer ul {
   .modal-image-open {
     display: none;
   }
+
+  form {
+    width: 70%;
+   }
 }
 
 @media screen and (min-width: 800px) {
