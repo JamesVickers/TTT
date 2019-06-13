@@ -200,6 +200,10 @@ main p {
   width: 95%;
   max-width: 550px; }
 
+.profile-img {
+  width: 159px;
+  height: 181px; }
+
 /* Example work images /////////////////////////////////////////////////////////////////////////////*/
 .previous-next-button-div {
   width: 100%;
@@ -297,6 +301,9 @@ main p {
 form {
   width: 90%; }
 
+form h3 {
+  text-align: center; }
+
 form ul {
   list-style-type: none;
   padding: 0; }
@@ -317,15 +324,24 @@ form textarea:focus {
   outline: none;
   border: 3px solid #8cd4ff; }
 
+form input::placeholder {
+  color: #ffe000; }
+
 button[type=submit] {
   display: block;
   margin: 10px auto 30px auto;
   padding: 15px;
   border-radius: 5px;
   outline: none;
-  background: #ffe000;
+  background: #8cd4ff;
   border: none;
   color: #383838; }
+
+button[type=submit]:focus {
+  border: 3px solid #ffe000; }
+
+.thank-you {
+  margin-bottom: 20px; }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
@@ -387,7 +403,10 @@ footer ul {
   .main-title-div h2 {
     width: 250px; }
   main p {
-    width: 90%; } }
+    width: 90%; }
+  .profile-img {
+    width: 179px;
+    height: 204px; } }
 
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
@@ -454,6 +473,9 @@ footer ul {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
     background-image: url("../img/brewces2.png"); }
+  .profile-img {
+    width: 238px;
+    height: 272px; }
   .work-img {
     width: 100%;
     height: 600px;

@@ -249,6 +249,11 @@ main p {
   max-width: 550px;
 }
 
+.profile-img {
+  width: 159px;
+  height: 181px;
+}
+
 /* Example work images /////////////////////////////////////////////////////////////////////////////*/
 
 .previous-next-button-div {
@@ -367,6 +372,10 @@ form {
  width: 90%;
 }
 
+form h3 {
+  text-align: center;
+ }
+
 form ul {
   list-style-type: none;
   padding: 0;
@@ -392,8 +401,8 @@ form textarea:focus {
   border: 3px solid $color-secondary;  
 }
 
-form h3 {
-  ///////////////////// finish this out to center text /////////////////////////*///
+form input::placeholder {
+  color: $color-primary
 }
 
 button[type=submit] {
@@ -402,9 +411,17 @@ button[type=submit] {
   padding: 15px;
   border-radius: 5px;
   outline: none;
-  background: $color-primary;
+  background: $color-secondary;
   border: none;
   color: $color-dark;
+}
+
+button[type=submit]:focus {
+  border: 3px solid $color-primary; 
+}
+
+.thank-you {
+  margin-bottom: 20px;
 }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
@@ -506,6 +523,11 @@ footer ul {
 
   main p {
     width: 90%;
+  }
+
+  .profile-img {
+    width: 179px;
+    height: 204px;
   }
 
 }
@@ -613,11 +635,17 @@ footer ul {
     background-image: url("../img/brewces2.png");
   }
 
+  .profile-img {
+    width: 238px;
+    height: 272px;
+  }
+
   .work-img {
     width: 100%;
     height: 600px;
     background-position: center;
   }
+
 }
 
 @media screen and (min-width: 850px) {
