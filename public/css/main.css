@@ -8,7 +8,8 @@
   box-sizing: border-box; }
 
 html {
-  min-height: 100%; }
+  min-height: 100%;
+  overflow-y: scroll; }
 
 h1 {
   font-family: "Share Tech Mono", monospace;
@@ -252,18 +253,22 @@ main p {
   color: #383838; }
 
 .work-text a > img {
-  max-width: 250px;
-  transition: transform 0.2s; }
+  width: 159px; }
 
 .work-text a:hover {
   cursor: pointer;
-  color: #8cd4ff;
-  transition: transform 0.2s;
-  transform: scale(1.1); }
+  color: #8cd4ff; }
 
 .work-text a:hover > img {
   cursor: pointer;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
+
+.work-text a,
+.work-text a > img,
+.work-text a:hover,
+.work-text a:hover > img {
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
 
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
 #first-spacing-div {
@@ -333,7 +338,7 @@ form textarea:focus {
 form input::placeholder {
   color: #ffe000; }
 
-button[type=submit] {
+button[type="submit"] {
   display: block;
   margin: 10px auto 30px auto;
   padding: 15px;
@@ -343,7 +348,7 @@ button[type=submit] {
   border: none;
   color: #383838; }
 
-button[type=submit]:focus {
+button[type="submit"]:focus {
   border: 3px solid #ffe000; }
 
 .thank-you {
@@ -412,7 +417,9 @@ footer ul {
     width: 90%; }
   .profile-img {
     width: 179px;
-    height: 204px; } }
+    height: 204px; }
+  .work-text a > img {
+    width: 179px; } }
 
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
