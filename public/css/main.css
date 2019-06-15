@@ -11,21 +11,17 @@ html {
   min-height: 100%;
   overflow-y: scroll; }
 
-h1 {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 2em; }
-
 h2,
 h3 {
-  font-family: "title-font";
   margin-top: 30px; }
 
 h2 {
-  font-size: 1.2em;
+  font-family: "title-font";
+  font-size: 1.3em;
   margin-bottom: 0; }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.15em;
   margin-bottom: 30px; }
 
 body {
@@ -60,7 +56,7 @@ body {
   font-family: "Abel", sans-serif;
   font-size: 1.2em;
   text-align: center;
-  width: 180px;
+  width: 220px;
   margin-top: 15px; }
 
 .hex-pattern-left,
@@ -90,6 +86,10 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: center; }
+
+.desktop-header img {
+  height: 76px;
+  width: 71px; }
 
 .desktop-nav-ul-left,
 .desktop-nav-ul-right {
@@ -144,6 +144,9 @@ footer ul {
   padding: 200px 0;
   justify-content: space-around; }
 
+.mobile-nav-modal ul li {
+  margin-bottom: 25px; }
+
 .mobile-nav-modal li:active {
   color: #ffe000; }
 
@@ -190,11 +193,11 @@ main {
 .banner-headline {
   font-family: "title-font";
   color: #ffffff;
-  width: 200px;
+  width: fit-content;
   margin: 0;
   position: absolute;
-  top: 60%;
-  left: 13.5%;
+  top: 80%;
+  left: 18%;
   transform: translate(-50%, -50%); }
 
 .scroll-icon {
@@ -319,7 +322,7 @@ form ul {
 form li {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 
 form input,
 form textarea {
@@ -366,8 +369,10 @@ footer ul {
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (min-width: 400px) {
+  body {
+    font-size: 1.1em; }
   h2 {
-    font-size: 1.35em; }
+    font-size: 1.4em; }
   h3 {
     font-size: 1.2em; }
   .modal-image-open,
@@ -375,23 +380,14 @@ footer ul {
     width: 56px;
     height: 65px; }
   .main-title-div h1 {
-    font-size: 4.4em;
+    font-size: 4em;
     margin-bottom: 10px; }
-  .main-title-div h2 {
-    font-size: 1.35em;
-    width: 210px; }
   form {
     width: 80%; } }
 
 @media screen and (min-width: 475px) {
-  h2 {
-    font-size: 1.6em; }
-  h3 {
-    font-size: 1.3em; }
   .main-title-div h1 {
     font-size: 5em; }
-  .main-title-div h2 {
-    font-size: 1.4em; }
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-size: 1.2em; }
@@ -402,15 +398,16 @@ footer ul {
   .hex-pattern-right {
     /* 3/4 img width and height */
     height: 338px;
-    width: 102px; } }
+    width: 102px; }
+  .banner-headline {
+    top: 80%;
+    left: 14%; } }
 
 @media screen and (min-width: 550px) {
-  body {
-    font-size: 16px; }
   h2 {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
   h3 {
-    font-size: 1.4em; }
+    font-size: 1.3em; }
   .main-title-div h2 {
     width: 250px; }
   main p {
@@ -444,10 +441,6 @@ footer ul {
     min-height: 300px; } }
 
 @media screen and (min-width: 650px) {
-  h2 {
-    font-size: 1.9em; }
-  h3 {
-    font-size: 1.5em; }
   main p {
     width: 80%; }
   .stand-out-content-div {
@@ -477,11 +470,10 @@ footer ul {
     width: 70%; } }
 
 @media screen and (min-width: 800px) {
-  /*example work images ///////////////////////////*/
   h2 {
-    font-size: 2em; }
-  h3 {
     font-size: 1.6em; }
+  h3 {
+    font-size: 1.4em; }
   #bochi-bochi-img {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
@@ -497,23 +489,18 @@ footer ul {
   .treetops-name-div h1:first-of-type {
     margin-right: 25px; }
   .main-title-div h2 {
-    width: 500px; } }
-
-@media screen and (min-width: 1100px) {
-  .main-title-div h1 {
-    font-size: 5.5em; }
-  .main-title-div h2 {
-    font-size: 1.5em; } }
+    width: 500px; }
+  .banner-headline {
+    top: 85%;
+    left: 10%; } }
 
 @media screen and (min-width: 1260px) {
-  .main-title-div h1 {
-    font-size: 6.5em; }
   .main-title-div h2 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     width: 600px; }
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
-    font-size: 1.4em; }
+    font-size: 1.3em; }
   .work-text {
     display: flex; }
   .work-text > .stand-out-content-div {
