@@ -20,6 +20,7 @@ $color-white: #ffffff;
 
 html {
   min-height: 100%;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -58,7 +59,7 @@ body {
 /* Title page css /////////////////////////////////////////////////////////////////*/
 
 .main-title-div {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -92,14 +93,14 @@ body {
 
 .hex-pattern-left {
   left: 20px;
- /* 2/3 img width and height */
+  /* 2/3 img width and height */
   height: 245px;
   width: 117px;
 }
 
 .hex-pattern-right {
   right: 20px;
- /* 2/3 img width and height */
+  /* 2/3 img width and height */
   height: 300px;
   width: 91px;
 }
@@ -312,21 +313,29 @@ main p {
 }
 
 .work-text a > img {
-  max-width: 250px;
-  transition: transform 0.2s;
+  width: 159px;
 }
 
 .work-text a:hover {
   cursor: pointer;
   color: $color-secondary;
-  transition: transform 0.2s;
-  transform: scale(1.1);
 }
 
 .work-text a:hover > img {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
+
+.work-text a,
+.work-text a > img,
+.work-text a:hover,
+.work-text a:hover > img {
+  transition: transform 0.2s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+///////////transitions for work images
+
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
 
 #first-spacing-div {
@@ -373,17 +382,16 @@ main p {
 /* contact form css //////////////////////////////////////////////////////////////////*/
 
 form {
- width: 90%;
+  width: 90%;
 }
 
 form h3 {
   text-align: center;
- }
+}
 
 form ul {
   list-style-type: none;
   padding: 0;
- 
 }
 
 form li {
@@ -395,10 +403,9 @@ form li {
 form input,
 form textarea {
   padding: 5px;
-  border: 1.5px solid $color-medium;  
+  border: 1.5px solid $color-medium;
   border-radius: 5px;
 }
-
 
 form textarea {
   resize: none;
@@ -407,14 +414,14 @@ form textarea {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border: 3px solid $color-secondary;  
+  border: 3px solid $color-secondary;
 }
 
 form input::placeholder {
-  color: $color-primary
+  color: $color-primary;
 }
 
-button[type=submit] {
+button[type="submit"] {
   display: block;
   margin: 10px auto 30px auto;
   padding: 15px;
@@ -425,8 +432,8 @@ button[type=submit] {
   color: $color-dark;
 }
 
-button[type=submit]:focus {
-  border: 3px solid $color-primary; 
+button[type="submit"]:focus {
+  border: 3px solid $color-primary;
 }
 
 .thank-you {
@@ -463,11 +470,11 @@ footer ul {
     height: 65px;
   }
 
-   .main-title-div h1 {
+  .main-title-div h1 {
     font-size: 4.4em;
     margin-bottom: 10px;
   }
-  
+
   .main-title-div h2 {
     font-size: 1.35em;
     width: 210px;
@@ -475,11 +482,10 @@ footer ul {
 
   form {
     width: 80%;
-   }
+  }
 }
 
 @media screen and (min-width: 475px) {
-
   h2 {
     font-size: 1.6em;
   }
@@ -487,11 +493,11 @@ footer ul {
   h3 {
     font-size: 1.3em;
   }
-    
+
   .main-title-div h1 {
     font-size: 5em;
   }
-  
+
   .main-title-div h2 {
     font-size: 1.4em;
   }
@@ -503,15 +509,15 @@ footer ul {
 
   .hex-pattern-left {
     /* 3/4 img width and height */
-     height: 276px;
-     width: 132px;
-   }
-   
-   .hex-pattern-right {
+    height: 276px;
+    width: 132px;
+  }
+
+  .hex-pattern-right {
     /* 3/4 img width and height */
-     height: 338px;
-     width: 102px;
-   }
+    height: 338px;
+    width: 102px;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -539,6 +545,9 @@ footer ul {
     height: 204px;
   }
 
+  .work-text a > img {
+    width: 179px;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -552,15 +561,15 @@ footer ul {
 
   .hex-pattern-left {
     /* 3/4 img width and height */
-     height: 368px;
-     width: 176px;
-   }
-   
-   .hex-pattern-right {
+    height: 368px;
+    width: 176px;
+  }
+
+  .hex-pattern-right {
     /* 3/4 img width and height */
-     height: 450px;
-     width: 136px;
-   }
+    height: 450px;
+    width: 136px;
+  }
 
   #bochi-bochi-img {
     background-image: url("../img/bochi-bochi-tablet.png");
@@ -622,7 +631,7 @@ footer ul {
 
   form {
     width: 70%;
-   }
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -649,7 +658,6 @@ footer ul {
     height: 600px;
     background-position: center;
   }
-
 }
 
 @media screen and (min-width: 850px) {
@@ -669,7 +677,7 @@ footer ul {
   .main-title-div h1 {
     font-size: 5.5em;
   }
-  
+
   .main-title-div h2 {
     font-size: 1.5em;
   }
@@ -679,7 +687,7 @@ footer ul {
   .main-title-div h1 {
     font-size: 6.5em;
   }
-  
+
   .main-title-div h2 {
     font-size: 1.8em;
     width: 600px;
