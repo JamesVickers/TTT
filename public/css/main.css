@@ -200,6 +200,10 @@ main p {
   width: 95%;
   max-width: 550px; }
 
+.profile-img {
+  width: 159px;
+  height: 181px; }
+
 /* Example work images /////////////////////////////////////////////////////////////////////////////*/
 .previous-next-button-div {
   width: 100%;
@@ -293,6 +297,52 @@ main p {
 .stand-out-content-div p:last-child {
   margin-bottom: 30px; }
 
+/* contact form css //////////////////////////////////////////////////////////////////*/
+form {
+  width: 90%; }
+
+form h3 {
+  text-align: center; }
+
+form ul {
+  list-style-type: none;
+  padding: 0; }
+
+form li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+
+form input,
+form textarea {
+  padding: 5px;
+  border: 1.5px solid #cfcfcf;
+  border-radius: 5px; }
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 3px solid #8cd4ff; }
+
+form input::placeholder {
+  color: #ffe000; }
+
+button[type=submit] {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  background: #8cd4ff;
+  border: none;
+  color: #383838; }
+
+button[type=submit]:focus {
+  border: 3px solid #ffe000; }
+
+.thank-you {
+  margin-bottom: 20px; }
+
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
   flex-shrink: 0; }
@@ -301,7 +351,7 @@ footer ul {
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
-  border-top: solid 1px #cfcfcf; }
+  border-top: solid 1.5px #cfcfcf; }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (min-width: 400px) {
@@ -318,7 +368,9 @@ footer ul {
     margin-bottom: 10px; }
   .main-title-div h2 {
     font-size: 1.35em;
-    width: 210px; } }
+    width: 210px; }
+  form {
+    width: 80%; } }
 
 @media screen and (min-width: 475px) {
   h2 {
@@ -351,7 +403,10 @@ footer ul {
   .main-title-div h2 {
     width: 250px; }
   main p {
-    width: 90%; } }
+    width: 90%; }
+  .profile-img {
+    width: 179px;
+    height: 204px; } }
 
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
@@ -404,7 +459,9 @@ footer ul {
     list-style-type: none;
     padding: 0; }
   .modal-image-open {
-    display: none; } }
+    display: none; }
+  form {
+    width: 70%; } }
 
 @media screen and (min-width: 800px) {
   /*example work images ///////////////////////////*/
@@ -416,6 +473,9 @@ footer ul {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
     background-image: url("../img/brewces2.png"); }
+  .profile-img {
+    width: 238px;
+    height: 272px; }
   .work-img {
     width: 100%;
     height: 600px;

@@ -35,28 +35,28 @@ function switchButtonImage(id, url) {
   $("#" + id).attr("src", url);
 }
 
-$(".banner-img")
+$(".work-link-img")
   .closest("div")
   .on("mouseover", function() {
     var target = $(this)
-      .find(".banner-img")
+      .find(".work-link-img")
       .attr("id")
       .replace("-button", "");
     var source = "/img/hex-" + target + "-button-yellow.png";
     $(this)
-      .find(".banner-img")
+      .find(".work-link-img")
       .attr("src", source);
   });
-$(".banner-img")
+$(".work-link-img")
   .closest("div")
   .on("mouseout", function() {
     var target = $(this)
-      .find(".banner-img")
+      .find(".work-link-img")
       .attr("id")
       .replace("-button", "");
     var source = "/img/hex-" + target + "-button-yellow-grey.png";
     $(this)
-      .find(".banner-img")
+      .find(".work-link-img")
       .attr("src", source);
   });
   
