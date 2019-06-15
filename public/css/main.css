@@ -143,6 +143,9 @@ footer ul {
   padding: 200px 0;
   justify-content: space-around; }
 
+.mobile-nav-modal li:active {
+  color: #ffe000; }
+
 .modal-hide {
   transform: translate(-100%, -100%);
   display: none; }
@@ -319,6 +322,9 @@ form textarea {
   border: 1.5px solid #cfcfcf;
   border-radius: 5px; }
 
+form textarea {
+  resize: none; }
+
 form input:focus,
 form textarea:focus {
   outline: none;
@@ -473,9 +479,6 @@ footer ul {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
     background-image: url("../img/brewces2.png"); }
-  .profile-img {
-    width: 238px;
-    height: 272px; }
   .work-img {
     width: 100%;
     height: 600px;
