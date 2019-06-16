@@ -22,7 +22,8 @@ h2 {
 
 h3 {
   font-size: 1.15em;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-family: "Abel", sans-serif; }
 
 body {
   min-height: 100vh;
@@ -231,18 +232,20 @@ main p {
 
 /*example work images /////////////////*/
 #bochi-bochi-img {
-  background-image: url("../img/bochi-bochi-mobile.png"); }
+  background-image: url("../img/bochi-bochi-img-mobile-single.png"); }
 
 #brewces-img {
-  background-image: url("../img/brewces-mobile.png"); }
+  background-image: url("../img/brewces-img-mobile-single.png"); }
 
 .work-img {
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: top;
   display: flex;
   flex-grow: 2;
-  min-width: 320px;
-  min-height: 550px; }
+  min-height: 300px;
+  width: 85%;
+  margin-top: 50px; }
 
 .work-intro-text {
   text-align: center; }
@@ -436,9 +439,10 @@ footer ul {
     background-image: url("../img/bochi-bochi-tablet.png"); }
   #brewces-img {
     background-image: url("../img/brewces-tablet.png"); }
-  .work-img {
+  /*.work-img {
     min-width: 400px;
-    min-height: 300px; } }
+    min-height: 300px;
+  }*/ }
 
 @media screen and (min-width: 650px) {
   main p {
@@ -477,11 +481,7 @@ footer ul {
   #bochi-bochi-img {
     background-image: url("../img/bochi-bochi2.png"); }
   #brewces-img {
-    background-image: url("../img/brewces2.png"); }
-  .work-img {
-    width: 100%;
-    height: 600px;
-    background-position: center; } }
+    background-image: url("../img/brewces2.png"); } }
 
 @media screen and (min-width: 850px) {
   .treetops-name-div {
@@ -493,6 +493,10 @@ footer ul {
   .banner-headline {
     top: 85%;
     left: 10%; } }
+
+@media screen and (min-width: 1024px) {
+  .work-img {
+    height: 400px; } }
 
 @media screen and (min-width: 1260px) {
   .main-title-div h2 {
