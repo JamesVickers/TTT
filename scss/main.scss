@@ -294,6 +294,10 @@ main p {
   background-image: url("../img/brewces-img-mobile-single.png");
 }
 
+#applications-img {
+  background-image: url("../img/regapp-img-mobile.png");
+}
+
 .work-img {
   background-size: contain;
   background-repeat: no-repeat;
@@ -574,6 +578,10 @@ footer ul {
 
   #brewces-img {
     background-image: url("../img/brewces-tablet.png");
+  }
+
+  #applications-img {
+    background-image: url("../img/regapp-tablet.png");
   }
 
   /*.work-img {
