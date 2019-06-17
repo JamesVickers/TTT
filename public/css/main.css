@@ -237,6 +237,9 @@ main p {
 #brewces-img {
   background-image: url("../img/brewces-img-mobile-single.png"); }
 
+#applications-img {
+  background-image: url("../img/regapp-img-mobile.png"); }
+
 .work-img {
   background-size: contain;
   background-repeat: no-repeat;
@@ -439,6 +442,8 @@ footer ul {
     background-image: url("../img/bochi-bochi-tablet.png"); }
   #brewces-img {
     background-image: url("../img/brewces-tablet.png"); }
+  #applications-img {
+    background-image: url("../img/regapp-tablet.png"); }
   /*.work-img {
     min-width: 400px;
     min-height: 300px;
