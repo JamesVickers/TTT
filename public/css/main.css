@@ -98,7 +98,9 @@ header {
 
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 .modal-image-open,
-.modal-image-close {
+.modal-image-close,
+#previous-button,
+#next-button {
   width: 48px;
   height: 56px; }
 
@@ -215,10 +217,11 @@ main p {
 .previous-next-button-div {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 40px;
-  position: fixed;
-  top: 50%; }
+  justify-content: space-between; }
+
+.previous-next-button-div h2 {
+  text-align: center;
+  padding-right: 4px; }
 
 #previous-button:hover,
 #next-button:hover {
@@ -392,7 +395,9 @@ footer ul {
   h3 {
     font-size: 1.2em; }
   .modal-image-open,
-  .modal-image-close {
+  .modal-image-close,
+  #previous-button,
+  #next-button {
     width: 56px;
     height: 65px; }
   .main-title-div h1 {
@@ -437,7 +442,9 @@ footer ul {
 @media screen and (min-width: 600px) {
   /*example work images ///////////////////////////*/
   .modal-image-open,
-  .modal-image-close {
+  .modal-image-close,
+  #previous-button,
+  #next-button {
     width: 64px;
     height: 74px; }
   .hex-pattern-left {
