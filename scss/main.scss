@@ -223,7 +223,6 @@ main {
   align-items: center;
   margin: 60px auto 100px auto;
   width: 90%;
-  /*max-width: 525px;*/
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -315,8 +314,21 @@ main p {
 }
 
 .work-text {
+  max-width: 500px;
   font-family: "Overpass", sans-serif;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work-text .stand-out-content-div {
+  max-width: 200px;
+  margin: 15px;
+}
+
+.work-text .stand-out-content-div h3 {
+  margin: 0;
 }
 
 .work-text a {
@@ -522,6 +534,7 @@ footer ul {
     top: 80%;
     left: 14%;
   }
+
 }
 
 @media screen and (min-width: 550px) {
@@ -679,6 +692,13 @@ footer ul {
   }
 }
 
+@media screen and (min-width: 1115px) {
+  .work-text {
+    max-width: 965px;
+  }
+}
+
+
 @media screen and (min-width: 1260px) {
   .main-title-div h2 {
     font-size: 1.4em;
@@ -688,10 +708,6 @@ footer ul {
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-size: 1.3em;
-  }
-
-  .work-text {
-    display: flex;
   }
 
   .work-text > .stand-out-content-div {
