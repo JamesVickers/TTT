@@ -362,7 +362,13 @@ main p {
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-///////////transitions for work images
+.fleelance-ul {
+  list-style-type: none;
+}
+
+.fleelance-ul li:not(first-child){
+  margin-top: 20px;
+}
 
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
 

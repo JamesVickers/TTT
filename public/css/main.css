@@ -292,6 +292,12 @@ main p {
   transition: transform 0.2s;
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
 
+.fleelance-ul {
+  list-style-type: none; }
+
+.fleelance-ul li:not(first-child) {
+  margin-top: 20px; }
+
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
 #first-spacing-div {
   margin-top: 24px;
