@@ -113,7 +113,7 @@ app.post("/send", (req, res) => {
     const mailOptions = {
       from: "jvickersdesign@gmail.com",
       to: "james.vickers@treetops.tech, hannah.vickers@treetops.tech",
-      subject: "New customer enquiry for Treetops Tech - Secure OAuth",
+      subject: "New customer enquiry for Treetops Tech",
       generateTextFromHTML: true,
       html: output
     };
