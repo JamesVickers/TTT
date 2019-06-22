@@ -31,7 +31,7 @@ $(window).resize(function() {
 });
 
 ///change work button images from greyscale to color on hover
-function switchButtonImage(id, url) {
+/*function switchButtonImage(id, url) {
   $("#" + id).attr("src", url);
 }
 
@@ -59,4 +59,5 @@ $(".work-link-img")
       .find(".work-link-img")
       .attr("src", source);
   });
+  */
   
