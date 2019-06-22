@@ -366,7 +366,7 @@ main p {
   list-style-type: none;
 }
 
-.fleelance-ul li:not(first-child){
+.fleelance-ul li:not(first-child) {
   margin-top: 20px;
 }
 
@@ -466,8 +466,9 @@ button[type="submit"] {
   color: $color-dark;
 }
 
-button[type="submit"]:focus {
-  border: 3px solid $color-primary;
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  background-color: $color-primary;
 }
 
 .thank-you {
@@ -546,7 +547,6 @@ footer ul {
     top: 80%;
     left: 14%;
   }
-
 }
 
 @media screen and (min-width: 550px) {
@@ -711,7 +711,6 @@ footer ul {
     max-width: 965px;
   }
 }
-
 
 @media screen and (min-width: 1260px) {
   .main-title-div h2 {

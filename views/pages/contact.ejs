@@ -1,75 +1,80 @@
-
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
 
-    <head>
-        <% include ../partials/head %>
-    </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-    <body>
-        <header>
-            <% include ../partials/header %>
-        </header>
-            
-        <main>
+    <main>
+      <div class="banner-div">
+        <img class="banner-img" src="/img/flowers-1200-blue.png" alt="" />
+        <h2 class="banner-headline">Contact</h2>
+      </div>
 
-            <div class="banner-div">
-                <img class="banner-img" src="/img/flowers-1200-blue.png" alt="">
-                <h2 class="banner-headline">Contact</h2>
-            </div>
-            
-            <img class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="scroll down icon" />
-    
-            <p>Treetops Tech would love to help grow your business or spread your
-                message.</p>
+      <img
+        class="scroll-icon"
+        src="/img/scroll-icon-opacity40.png"
+        alt="scroll down icon"
+      />
 
-            <p>Get in touch to start your journey.</p>
+      <p>
+        Treetops Tech would love to help grow your business or spread your
+        message.
+      </p>
 
-            <p>Complete the following confidential form to send us an email, or call us if you'd prefer.</p>
+      <p>Get in touch to start your journey.</p>
 
-            <div class="stand-out-content-div">
-                <form method="POST" action="/send">
-                    <h3>Enquire today</h3>
+      <p>
+        Complete the following confidential form to send us an email, or call us
+        if you'd prefer.
+      </p>
 
-                    <ul>    
-                    <li>
-                        <label>Name</label>
-                        <input type="text" autocomplete="off" name="name" required>
-                    </li>
-                    <li>
-                        <label>Company Name</label>
-                        <input type="text" autocomplete="off" name="company" required>
-                    </li>
-                    <li>
-                        <label>Email</label>
-                        <input type="email" autocomplete="off" name="email" required>
-                    </li>
-                    <li>
-                        <label>Telephone</label>
-                        <input type="text" autocomplete="off" name="telephone" required>
-                    </li>
-                    <li>
-                        <label>Enquiry Message</label>
-                        <textarea type="text" rows="6" name="message"></textarea>
-                    </li>
-                    <button type="submit">Submit</button>
+      <div class="stand-out-content-div">
+        <form method="POST" action="/send">
+          <h3>Enquire today</h3>
 
-                    </ul>
-                </form>
-            </div>
-          
+          <ul>
+            <li>
+              <label>Name</label>
+              <input type="text" autocomplete="off" name="name" required />
+            </li>
+            <li>
+              <label>Company Name</label>
+              <input type="text" autocomplete="off" name="company" required />
+            </li>
+            <li>
+              <label>Email</label>
+              <input type="email" autocomplete="off" name="email" required />
+            </li>
+            <li>
+              <label>Telephone</label>
+              <input type="text" autocomplete="off" name="telephone" />
+            </li>
+            <li>
+              <label>Enquiry Message</label>
+              <textarea type="text" rows="6" name="message"></textarea>
+            </li>
+            <button type="submit">Submit</button>
+          </ul>
+        </form>
+      </div>
 
-            
-            <div id="first-spacing-div" class="spacing-div">
-                <img class="" src="/img/hex-falling-line-left.png" alt="faint hexagons falling downwards" />
-            </div>
+      <div id="first-spacing-div" class="spacing-div">
+        <img
+          class=""
+          src="/img/hex-falling-line-left.png"
+          alt="faint hexagons falling downwards"
+        />
+      </div>
+    </main>
 
-        </main>
-        
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-        <% include ../partials/modal %> <%include ../partials/javascript %>
-    </body>
-
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+    <% include ../partials/modal %> <%include ../partials/javascript %>
+  </body>
 </html>

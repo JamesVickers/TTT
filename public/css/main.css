@@ -376,8 +376,9 @@ button[type="submit"] {
   border: none;
   color: #383838; }
 
-button[type="submit"]:focus {
-  border: 3px solid #ffe000; }
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  background-color: #ffe000; }
 
 .thank-you {
   margin-bottom: 20px; }
