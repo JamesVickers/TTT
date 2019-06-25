@@ -363,11 +363,17 @@ main p {
 }
 
 .fleelance-ul {
+  width: 80%;
   list-style-type: none;
+  margin-bottom: 0;
 }
 
-.fleelance-ul li:not(first-child) {
+.fleelance-ul li:not(:first-child) {
   margin-top: 20px;
+}
+
+.fleelance-ul li:last-child {
+  margin-bottom: 40px;
 }
 
 /* reusable div css //////////////////////////////////////////////////////////////////////////*/
@@ -397,6 +403,7 @@ main p {
 }
 
 .stand-out-content-div h3 {
+  max-width: 80%;
   margin: 30px 0 30px 0;
 }
 
@@ -411,6 +418,15 @@ main p {
 
 .stand-out-content-div p:last-child {
   margin-bottom: 30px;
+}
+
+.freelance-first-p {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+#freelance-stand-out-div p:first-of-type {
+  margin: 40px auto 0 auto;
 }
 
 /* contact form css //////////////////////////////////////////////////////////////////*/
