@@ -268,7 +268,7 @@ main p {
   margin: 15px; }
 
 .work-text .stand-out-content-div h3 {
-  margin: 0; }
+  margin: 0 auto; }
 
 .work-text a {
   text-decoration: none;
@@ -294,7 +294,6 @@ main p {
 
 .fleelance-ul {
   width: 80%;
-  list-style-type: none;
   margin-bottom: 0; }
 
 .fleelance-ul li:not(:first-child) {
@@ -343,6 +342,10 @@ main p {
   margin-top: 50px;
   margin-bottom: 10px; }
 
+.freelance-first-p,
+.freelance-last-p {
+  text-align: center; }
+
 #freelance-stand-out-div p:first-of-type {
   margin: 40px auto 0 auto; }
 
@@ -350,8 +353,9 @@ main p {
 form {
   width: 90%; }
 
-form h3 {
-  text-align: center; }
+.stand-out-content-div form h3 {
+  text-align: center;
+  margin: 30px auto; }
 
 form ul {
   list-style-type: none;
