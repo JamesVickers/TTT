@@ -93,7 +93,7 @@ app.post("/send", (req, res) => {
       refresh_token:
         "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
     });
-    const tokens = await oauth2Client.refreshAccessToken();
+    const tokens = await oauth2Client;
     const accessToken = tokens.credentials.access_token;
 
     const smtpTransport = nodemailer.createTransport({
@@ -119,7 +119,7 @@ app.post("/send", (req, res) => {
     };
 
     smtpTransport.sendMail(mailOptions, (error, response) => {
-      error ? console.log(error) : console.log(response);
+      error ? console.log(error) : console.log('Form submitted');
       smtpTransport.close();
     });
   } // That last brace is to close off our async function
