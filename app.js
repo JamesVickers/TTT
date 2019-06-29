@@ -93,8 +93,9 @@ app.post("/send", (req, res) => {
       refresh_token:
         "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
     });
-    const tokens = await oauth2Client;
-    const accessToken = tokens.credentials.access_token;
+    const tokens = await oauth2Client.getAccessToken;
+    //const accessToken = tokens.credentials.access_token;
+    const accessToken = tokens.token;
 
     const smtpTransport = nodemailer.createTransport({
       service: "gmail",
