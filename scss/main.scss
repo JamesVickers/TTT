@@ -16,6 +16,7 @@ $color-white: #ffffff;
 
 * {
   box-sizing: border-box;
+
 }
 
 html {
@@ -42,6 +43,10 @@ h3 {
 
 body {
   min-height: 100vh;
+      /*variable prop test*/
+  // background-color: tomato; /* Fallback for browsers that do not support Custom Properties */
+  //height: calc(var(--vh, 1vh) * 100);
+
   font-family: "Overpass", sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -80,26 +85,12 @@ body {
   margin-top: 15px;
 }
 
-.hex-pattern-left,
-.hex-pattern-right {
-  position: absolute;
-  bottom: 20px;
-  opacity: 0.15;
+
+.hex-index-div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.hex-pattern-left {
-  left: 20px;
-  /* 2/3 img width and height */
-  height: 245px;
-  width: 117px;
-}
-
-.hex-pattern-right {
-  right: 20px;
-  /* 2/3 img width and height */
-  height: 300px;
-  width: 91px;
-}
 
 /* Header css ///////////////////////////////////////////////////////////////////////*/
 
@@ -223,7 +214,7 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 60px auto 100px auto;
+  margin: 60px auto 0 auto;
   width: 90%;
   flex-grow: 1;
   display: flex;
@@ -501,6 +492,7 @@ button[type="submit"]:hover {
 
 footer {
   flex-shrink: 0;
+  margin-top: 100px;
 }
 
 footer ul {
@@ -511,7 +503,11 @@ footer ul {
 }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
-
+@media screen and (max-width: 355px) {
+  .hex-pattern-right {
+    display: none;
+  }
+}
 @media screen and (min-width: 400px) {
   body {
     font-size: 1.1em;
@@ -551,18 +547,6 @@ footer ul {
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-size: 1.2em;
-  }
-
-  .hex-pattern-left {
-    /* 3/4 img width and height */
-    height: 276px;
-    width: 132px;
-  }
-
-  .hex-pattern-right {
-    /* 3/4 img width and height */
-    height: 338px;
-    width: 102px;
   }
 
   .banner-headline {
@@ -607,18 +591,6 @@ footer ul {
   #next-button {
     width: 64px;
     height: 74px;
-  }
-
-  .hex-pattern-left {
-    /* 3/4 img width and height */
-    height: 368px;
-    width: 176px;
-  }
-
-  .hex-pattern-right {
-    /* 3/4 img width and height */
-    height: 450px;
-    width: 136px;
   }
 
   #bochi-bochi-img {
@@ -735,6 +707,10 @@ footer ul {
 }
 
 @media screen and (min-width: 1260px) {
+  .main-title-div{
+    margin-top: 50px;
+  }
+
   .main-title-div h2 {
     font-size: 1.4em;
     width: 600px;
