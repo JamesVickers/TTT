@@ -12,7 +12,7 @@
         </header>
 
         <main>
-            <div class="main-title-div">
+            <div class="main-title-div" tabindex="1">
                 <div class="treetops-name-div">
                     <h1>Treetops</h1>
                     <h1>Tech</h1>
@@ -24,8 +24,14 @@
             -->
          </main>
          <div class="hex-index-div"> 
-                <img class="hex-pattern-left" src="/img/hex-index-left.png" alt="hexagonal pattern in background to the left of the page">
-                <img class="hex-pattern-right" src="/img/hex-index-right.png" alt="hexagonal pattern in background to the right of the page."> 
+                <img class="hex-pattern-left" 
+                     src="/img/hex-index-left.png" 
+                     alt="hexagonal pattern in background to the left of the page" 
+                     aria-hidden="true">
+                <img class="hex-pattern-right" 
+                     src="/img/hex-index-right.png" 
+                     alt="hexagonal pattern in background to the right of the page." 
+                     aria-hidden="true"> 
          </div>
 
         <% include ../partials/modal %> <%include ../partials/javascript %>
