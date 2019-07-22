@@ -72,10 +72,12 @@ app.post("/send", (req, res) => {
             <li>Company: ${req.body.company}</li>
             <li>Email: ${req.body.email}</li>
             <li>Telephone: ${req.body.telephone}</li>
+            <li>Consent: ${req.body.consent}</li>
         </ul>
         <h3>Message</h3>
         <p>${req.body.message}</p>
         `;
+        console.log(req.body);
 
     // youremailprogram.js
     const nodemailer = require("nodemailer");
