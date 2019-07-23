@@ -408,6 +408,21 @@ footer ul {
   padding: 40px 0;
   border-top: solid 1.5px #cfcfcf; }
 
+.fa {
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #383838;
+  color: #efefef; }
+
+.fa:hover {
+  background-color: #cfcfcf;
+  color: #383838; }
+
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (max-width: 355px) {
   .hex-pattern-right {
