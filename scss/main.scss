@@ -530,7 +530,7 @@ footer ul {
   color: $color-light;
 }
 
-.fa:hover {
+.fa:hover, .fa:focus {
   background-color: $color-medium;
   color: $color-dark;
 }

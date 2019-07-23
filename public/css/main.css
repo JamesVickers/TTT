@@ -419,7 +419,7 @@ footer ul {
   background-color: #383838;
   color: #efefef; }
 
-.fa:hover {
+.fa:hover, .fa:focus {
   background-color: #cfcfcf;
   color: #383838; }
 
