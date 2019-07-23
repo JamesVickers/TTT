@@ -447,6 +447,14 @@ form li {
   margin-bottom: 25px;
 }
 
+form li:last-of-type {
+  flex-direction: row-reverse;
+}
+
+form li:last-of-type label {
+  margin-left: 15px;
+}
+
 form input,
 form textarea {
   padding: 5px;
@@ -456,6 +464,12 @@ form textarea {
 
 form textarea {
   resize: none;
+}
+
+form input[type=checkbox] {
+  width: 40px;
+  height: 40px;
+  
 }
 
 form input:focus,
