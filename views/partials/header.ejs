@@ -1,7 +1,11 @@
 <div class="desktop-header" >
+  <div>
+    <a class="screen-reader-main" href="#main-content" tabindex="1">Skip to Main Content</a>
+    <a class="screen-reader-footer" href="#footer" tabindex="1">Skip to Footer</a>
+  </div>
   <ul class="desktop-nav-ul-left">
-    <li onclick="location.href='/about'" tabindex="1" aria-label="Clickable link to the About page">About</li>
-    <li onclick="location.href='/work'" tabindex="1">Work</li>
+    <li tabindex="1" aria-label="Clickable link to the About page"><a href="/about">About</a></li>
+    <li tabindex="1" aria-label="Clickable link to the Work page"><a href="/work">Work</a></li>
   </ul>
   <img
     src="img/TTT_header_logo.svg"
@@ -11,8 +15,8 @@
     aria-label="Treetops tech logo. Navigation link to homepage."
   />
   <ul class="desktop-nav-ul-right">
-    <li onclick="location.href='/values'" tabindex="1">Values</li>
-    <li onclick="location.href='/contact'" tabindex="1">Contact</li>
+    <li tabindex="1" aria-label="Clickable link to the Values page"><a href="/values" >Values</a></li>
+    <li tabindex="1" aria-label="Clickable link to the Contact page"><a href="/contact">Contact</a></li>
   </ul>
 </div>
 
