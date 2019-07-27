@@ -83,6 +83,30 @@ header {
 .desktop-nav-ul-right {
   display: none; }
 
+.desktop-nav-ul-left li a,
+.desktop-nav-ul-right li a {
+  text-decoration: none;
+  color: #383838;
+  outline: none; }
+
+.screen-reader-main,
+.screen-reader-footer {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  background-color: #383838;
+  color: #ffe000;
+  text-decoration: none;
+  padding: 20px; }
+
+.screen-reader-main:focus,
+.screen-reader-footer:focus {
+  z-index: 999;
+  top: 20px;
+  left: 20px;
+  outline: none;
+  border: solid 5px #ffe000; }
+
 /* Modal CSS /////////////////////////////////////////////////////////////////////////////*/
 .modal-image-open,
 .modal-image-close,
@@ -131,13 +155,15 @@ footer ul {
 
 .mobile-nav-modal ul {
   height: 100%;
-  padding: 200px 0;
+  padding: 150px 0;
   justify-content: space-around; }
 
-.mobile-nav-modal ul li {
-  margin-bottom: 25px; }
+.mobile-nav-modal ul li a {
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: #efefef; }
 
-.mobile-nav-modal li:active {
+.mobile-nav-modal li a:active {
   color: #ffe000; }
 
 .modal-hide {
@@ -407,6 +433,21 @@ footer ul {
   margin: 0 auto;
   padding: 40px 0;
   border-top: solid 1.5px #cfcfcf; }
+
+.fa {
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #383838;
+  color: #efefef; }
+
+.fa:hover, .fa:focus {
+  background-color: #cfcfcf;
+  color: #383838; }
 
 /* Media queries /////////////////////////////////////////////////////////////////////////*/
 @media screen and (max-width: 355px) {

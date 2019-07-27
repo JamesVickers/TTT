@@ -9,8 +9,8 @@
       <% include ../partials/header %>
     </header>
 
-    <main>
-      <div class="stand-out-content-div">
+    <main id="main-content">
+      <div class="stand-out-content-div" tabindex="0" class="blur-focus">
         <h2 class="thank-you">Thank you!</h2>
         <p>
           Treetops Tech have received your email and will contact you shortly.
@@ -21,14 +21,15 @@
         <img
           class=""
           src="/img/hex-falling-line-left.png"
-          alt="faint hexagons falling downwards"
+          alt="hexagonal pattern in background in the center of the screen" 
+          aria-hidden="true"
         />
       </div>
     </main>
 
-    <footer>
+    <footer id="footer">
       <% include ../partials/footer %>
-    </footer>
+    </footer id="footer">
     <% include ../partials/modal %> <%include ../partials/javascript %>
   </body>
 </html>

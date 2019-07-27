@@ -9,13 +9,13 @@
       <% include ../partials/header %>
     </header>
 
-    <main>
+    <main id="main-content">
       <div class="banner-div">
         <img class="banner-img" 
              src="/img/fern-1200-blue.png" 
              alt="close up of fern leaves" 
              aria-hidden="true" />
-        <h2 class="banner-headline" tabindex="1">About</h2>
+        <h2 class="banner-headline" tabindex="0">About</h2>
       </div>
 
       <img class="scroll-icon" 
@@ -23,11 +23,11 @@
            alt="Icon directing the user to scroll down the page" 
            aria-hidden="true" />
       
-      <p tabindex="1">
+      <p tabindex="0" class="blur-focus">
         Based in the Staffordshire Moorlands in a peaceful location, we have
         the perfect base to focus on your project.
       </p>
-      <p tabindex="1">
+      <p tabindex="0" class="blur-focus">
         With a wide industry knowledge base from agriculture to pharmaceuticals, our
         team is ready to build your ideas into fully formed and functional
         products.
@@ -40,9 +40,9 @@
              aria-hidden="true" />
       </div>
       
-      <h2 tabindex="1">The Team</h2>
+      <h2 tabindex="0" class="blur-focus">The Team</h2>
 
-      <div class="stand-out-content-div" tabindex="1">
+      <div class="stand-out-content-div" tabindex="0" class="blur-focus">
         <h3>James, Developer</h3>
         <img class="profile-img" 
              src="/img/profile-jay-grey.svg"
@@ -66,7 +66,7 @@
       </div>
 
 
-      <div class="stand-out-content-div" tabindex="1">
+      <div class="stand-out-content-div blur-focus" tabindex="0">
         <h3>Hannah, Developer</h3>
         <img class="profile-img" 
              src="/img/profile-han-grey.svg" 
@@ -82,7 +82,7 @@
              aria-hidden="true"/>
       </div>
 
-      <div class="stand-out-content-div" tabindex="1">
+      <div class="stand-out-content-div blur-focus" tabindex="0">
         <h3>The Design Team</h3>
         <img class="profile-img" 
              src="/img/profile-designer-grey.svg" 
@@ -94,7 +94,7 @@
 
     </main>
 
-    <footer>
+    <footer id="footer">
       <% include ../partials/footer %>
     </footer>
     <% include ../partials/modal %> <%include ../partials/javascript %>
