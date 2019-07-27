@@ -9,13 +9,13 @@
       <% include ../partials/header %>
     </header>
 
-    <main>
+    <main id="main-content">
       <div class="banner-div">
         <img class="banner-img" 
              src="/img/grass-1200-blue.png" 
              alt="close up of grass" 
              aria-hidden="true"/>
-        <h2 class="banner-headline" tabindex="1">Work</h2>
+        <h2 class="banner-headline" tabindex="0" class="blur-focus">Work</h2>
       </div>
 
       <img
@@ -25,13 +25,13 @@
         aria-hidden="true"
       />
 
-      <p class="work-intro-text" tabindex="1">
+      <p class="work-intro-text blur-focus" tabindex="0">
         Click the links below to explore what we offer
       </p>
 
       <div class="work-text">
         <div class="stand-out-content-div">
-          <a href="/brewces" tabindex="1">
+          <a href="/brewces" tabindex="0" class="blur-focus">
             <img
               id="brewces-button"
               class="work-link-img"
@@ -42,7 +42,7 @@
           </a>
         </div>
         <div class="stand-out-content-div">
-          <a href="/bochi-bochi" tabindex="1">
+          <a href="/bochi-bochi" tabindex="0" class="blur-focus">
             <img
               id="bochi-bochi-button"
               class="work-link-img"
@@ -53,7 +53,7 @@
           </a>
         </div>
         <div class="stand-out-content-div">
-          <a href="/applications" tabindex="1">
+          <a href="/applications" tabindex="0" class="blur-focus">
             <img
               id="apps-button"
               class="work-link-img"
@@ -64,7 +64,7 @@
           </a>
         </div>
         <div class="stand-out-content-div">
-          <a href="/freelance" tabindex="1">
+          <a href="/freelance" tabindex="0" class="blur-focus">
             <img
               id="freelance-button"
               class="work-link-img"
@@ -77,7 +77,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer id="footer">
       <% include ../partials/footer %>
     </footer>
     <% include ../partials/modal %> <%include ../partials/javascript %>

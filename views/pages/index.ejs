@@ -7,12 +7,37 @@
 
     <body>
          
+        <!-- header.ejs partial not used on index page to avaoil screen-reader 'Skip to..' from dispalying on this page -->
         <header>
-            <% include ../partials/header %>
+            <div class="desktop-header" >
+                <ul class="desktop-nav-ul-left">
+                    <li onclick="location.href='/about'" tabindex="0" class="blur-focus" aria-label="Clickable link to the About page">About</li>
+                    <li onclick="location.href='/work'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Work page">Work</li>
+                </ul>
+                <img
+                    src="img/TTT_header_logo.svg"
+                    alt="Treetops Tech logo; seven small hexagons arranged in a circle."
+                    onclick="location.href='/'"
+                    tabindex="0"
+                    class="blur-focus"
+                    aria-label="Treetops tech logo. Navigation link to homepage."
+                />
+                <ul class="desktop-nav-ul-right">
+                    <li onclick="location.href='/values'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Values page">Values</li>
+                    <li onclick="location.href='/contact'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Contact page">Contact</li>
+                </ul>
+            </div>
+                
+                <img
+                class="modal-image-open"
+                src="img/hex-button-left-color.png"
+                alt="button pointing left to open nav menu"
+                id="openMenu"
+                />
         </header>
 
         <main>
-            <div class="main-title-div" tabindex="1">
+            <div class="main-title-div" tabindex="0" class="blur-focus">
                 <div class="treetops-name-div">
                     <h1>Treetops</h1>
                     <h1>Tech</h1>

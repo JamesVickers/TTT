@@ -2,13 +2,14 @@
     <img
       src="img/hex-button-right-color.png"
       alt="Arrow pointing to the right to close the navigation menu"
-      class="modal-image-close"
+      class="modal-image-close blur-focus"
       id="closeMenu"
+      tabindex="-1"
     />
     <ul>
-      <li onclick="location.href='/about'">About</li>
-      <li onclick="location.href='/work'">Work</li>
-      <li onclick="location.href='/values'">Values</li>
-      <li onclick="location.href='/contact'">Contact</li>
+      <li aria-label="Clickable link to the About page"><a href="/about">About</a></li>
+      <li aria-label="Clickable link to the Work page"><a href="/work">Work</a></li>
+      <li aria-label="Clickable link to the Values page"><a href="/values" >Values</a></li>
+      <li aria-label="Clickable link to the Contact page"><a href="/contact">Contact</a></li>
     </ul>
 </div>
