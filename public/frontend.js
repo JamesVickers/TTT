@@ -25,6 +25,27 @@ $("#closeMenu").on("click", function() {
 
 
 
+// only show focus on keyboard events (tabbing for a11y), not for mouse click events
+
+//on click, if element has a tab index and if event is a click, blur focus
+
+let mouseDown = false;
+
+$(".blur-focus").on('mousedown', () => {
+  mouseDown = true;
+});
+
+$(".blur-focus").on('mouseup', () => {
+  mouseDown = false;
+});
+
+$(".blur-focus").on('focus', (event) => {
+  if (mouseDown) {
+    event.target.blur();
+  }
+});
+
+
 //hide modal automatically if window is resized > 700px
 $(window).resize(function() {
   if (window.matchMedia("(min-width: 700px)").matches) {

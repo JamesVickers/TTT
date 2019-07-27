@@ -527,7 +527,7 @@ footer ul {
   .desktop-header {
     display: flex;
     justify-content: space-around; }
-  .desktop-header li a:hover {
+  .desktop-header li:hover {
     cursor: pointer;
     color: #8cd4ff; }
   .desktop-nav-ul-left,

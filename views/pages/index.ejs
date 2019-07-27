@@ -11,19 +11,20 @@
         <header>
             <div class="desktop-header" >
                 <ul class="desktop-nav-ul-left">
-                    <li tabindex="1" aria-label="Clickable link to the About page"><a href="/about">About</a></li>
-                    <li tabindex="1" aria-label="Clickable link to the Work page"><a href="/work">Work</a></li>
+                    <li onclick="location.href='/about'" tabindex="0" class="blur-focus" aria-label="Clickable link to the About page">About</li>
+                    <li onclick="location.href='/work'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Work page">Work</li>
                 </ul>
                 <img
                     src="img/TTT_header_logo.svg"
                     alt="Treetops Tech logo; seven small hexagons arranged in a circle."
                     onclick="location.href='/'"
-                    tabindex="1"
+                    tabindex="0"
+                    class="blur-focus"
                     aria-label="Treetops tech logo. Navigation link to homepage."
                 />
                 <ul class="desktop-nav-ul-right">
-                    <li tabindex="1" aria-label="Clickable link to the Values page"><a href="/values" >Values</a></li>
-                    <li tabindex="1" aria-label="Clickable link to the Contact page"><a href="/contact">Contact</a></li>
+                    <li onclick="location.href='/values'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Values page">Values</li>
+                    <li onclick="location.href='/contact'" tabindex="0" class="blur-focus" aria-label="Clickable link to the Contact page">Contact</li>
                 </ul>
             </div>
                 
@@ -36,7 +37,7 @@
         </header>
 
         <main>
-            <div class="main-title-div" tabindex="1">
+            <div class="main-title-div" tabindex="0" class="blur-focus">
                 <div class="treetops-name-div">
                     <h1>Treetops</h1>
                     <h1>Tech</h1>
