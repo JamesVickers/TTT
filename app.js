@@ -61,6 +61,16 @@ app.get("/contact", function(req, res) {
   res.render("pages/contact");
 });
 
+// blog page
+app.get("/blog", function(req, res) {
+  res.render("pages/blog");
+});
+
+// news page
+app.get("/news", function(req, res) {
+  res.render("pages/news");
+});
+
 // Enquiry form
 app.post("/send", (req, res) => {
   async function sendEmail() {
