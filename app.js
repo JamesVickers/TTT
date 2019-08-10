@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
+const mongo = require('mongodb');
+const mongoose = require("mongoose");
+const db = mongoose.connection;
+
+
 // set location for static files like .css
 app.use(express.static(__dirname + "/public"));
 
@@ -12,7 +17,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Routes *************************************************************************************
+/* Routes /////////////////////////////////////////////////////////////////////////////////////*/
 
 // home page
 app.get("/", function(req, res) {
@@ -61,17 +66,57 @@ app.get("/contact", function(req, res) {
   res.render("pages/contact");
 });
 
+
+
+//Set up default mongoose connection
+var mongoDB = 'mongodb://localhost:27017/TTT';
+//var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
+
+mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
+mongoose.connection.on('error', console.error.bind(console, 'Mongo error:'));
+
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+//Added the following 'mongoose.set' to remove this console warning:
+//(node:3916) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+//mongoose.set('useCreateIndex', true)
+
+
+
 // blog page
-app.get("/blog", function(req, res) {
-  res.render("pages/blog");
+app.get('/blog', (req, res) => {
+
+  //pass in title of blog post on request object. Use to filter db result. Pass back result
+  //the blog page queries db for all results and passes results to blog.ejs in 'blogPosts' variable
+  db.collection('blogPosts')
+  .find()
+  .toArray((err, result) => {
+    if (err) return console.log(err)
+    // else renders list.ejs
+    res.render('pages/blog', {blogPosts: result})
+  })
 });
+
+
+app.get('/blog/:id', async (req, res) => {
+    const blog = await Blog.findById(req.params.id)
+    res.render('blog', {
+        blog
+    })
+});
+
+
 
 // news page
 app.get("/news", function(req, res) {
   res.render("pages/news");
 });
 
-// Enquiry form
+/* Enquiry form ///////////////////////////////////////////////////////////////////////////*/
 app.post("/send", (req, res) => {
   async function sendEmail() {
     const output = `
@@ -140,6 +185,69 @@ app.post("/send", (req, res) => {
   sendEmail();
   res.render("pages/thank-you");
 });
+
+/* MongoDB ///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*
+
+//Set up default mongoose connection
+var mongoDB = 'mongodb://localhost:27017/TTT';
+
+mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
+mongoose.connection.on('error', console.error.bind(console, 'Mongo error:'));
+
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+//Added the following 'mongoose.set' to remove this console warning:
+//(node:3916) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+//mongoose.set('useCreateIndex', true)
+
+//Define a schema
+var Schema = mongoose.Schema;
+
+var visitorSchema = new Schema({
+    title: { type: String, uppercase: true },
+    mainContent: { type: String, uppercase: true },
+    author: { type: String, uppercase: true },
+    created: {type: Date, default: Date.now},
+});
+
+// Compile model from schema
+var visitorModel = mongoose.model('Register', visitorSchema );
+var visitorModelInstance;
+
+
+// on /enter form submission, save entry to db collection then redirect to /enter-success.ejs 
+app.post('/enter', (req, res) => {
+    visitorModelInstance = new visitorModel(req.body);
+    visitorModelInstance.save()
+    .then(item => {
+       res.redirect('/enter-success');
+    })
+    .catch(err => {
+        res.status(400).send('unable to save to database');
+    });
+});
+
+// on /exit form submission, remove entry from db collection then redirect to /exit-success.ejs 
+app.post('/exit', (req, res) => {
+    visitorModel.deleteOne( { 'firstName': req.body.firstName.toUpperCase(), 'lastName': req.body.lastName.toUpperCase() }, function (err, response) {
+        if (err) return handleError(err);
+       // response contains { n: 1, ok: 1 }
+       if (response.n > 0) {
+        res.redirect('/exit-success');
+       } else {
+        res.redirect('/oops');
+       }
+    });
+});
+
+*/
+
 
 // listen on port 3000
 app.listen(process.env.port || 3000);

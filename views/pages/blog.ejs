@@ -25,6 +25,46 @@
         aria-hidden="true"
       />
 
+      <ul>
+            <% blogPosts.forEach(function(blog){ %>
+          <li>
+              <h3>
+                <a href="/blog/<% blog._id %>">
+                  <%= blog.title %>
+                </a>
+              </h3>
+          </li>
+            <% }) %>
+      </ul>
+
+      <!--
+        if blog.title is clicked
+        remove other titles
+        display blog.mainContent, blog.created and blog.author
+      -->
+
+      <!--
+      <ul>
+          <% blogPosts.forEach(function(blog){ %>
+        <li>
+            <h3>
+                <%= blog.title %>
+            </h3>
+            <p>
+                <%= blog.mainContent %>
+            </p>
+            <p>
+                <%= blog.created.toLocaleString() %>
+            </p>
+            <p>
+                <%= blog.author %>
+            </p>
+        </li>
+          <% }) %>
+    </ul>
+    -->
+
+
     </main>
 
     <footer id="footer">
