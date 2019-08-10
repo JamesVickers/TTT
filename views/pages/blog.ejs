@@ -29,14 +29,13 @@
             <% blogPosts.forEach(function(blog){ %>
           <li>
               <h3>
-                <a href="/blog/<% blog._id %>">
+                <a href="/blog/<%= blog._id %>">
                   <%= blog.title %>
                 </a>
               </h3>
           </li>
             <% }) %>
       </ul>
-
       <!--
         if blog.title is clicked
         remove other titles

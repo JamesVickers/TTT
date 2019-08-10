@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 
 const mongo = require('mongodb');
+const ObjectID = require('mongodb').ObjectID;
 const mongoose = require("mongoose");
 const db = mongoose.connection;
 
@@ -103,10 +104,18 @@ app.get('/blog', (req, res) => {
 
 
 app.get('/blog/:id', async (req, res) => {
-    const blog = await Blog.findById(req.params.id)
-    res.render('blog', {
-        blog
-    })
+
+  let id = ObjectID(req.params.id);
+  let blogCollection = await db.collection('blogPosts');
+
+  blogCollection.findOne({ _id : id }, (err, result) => {
+    if (err) {
+      console.log("failed blog id page");
+    } else {
+      console.log(result);
+      res.render('pages/singlePost', { singlePost: result })
+    }
+  });
 });
 
 
