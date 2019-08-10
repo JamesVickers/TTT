@@ -112,7 +112,6 @@ app.get('/blog/:id', async (req, res) => {
     if (err) {
       console.log("failed blog id page");
     } else {
-      console.log(result);
       res.render('pages/singlePost', { singlePost: result })
     }
   });
@@ -141,7 +140,7 @@ app.post("/send", (req, res) => {
         <h3>Message</h3>
         <p>${req.body.message}</p>
         `;
-        console.log(req.body);
+        
 
     // youremailprogram.js
     const nodemailer = require("nodemailer");
