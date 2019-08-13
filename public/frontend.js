@@ -86,3 +86,34 @@ $(".work-link-img")
   });
   */
 
+function resizeFacebook(w, h) {
+  $(".facebook-container").css("width", w);
+  $(".facebook-container").css("height", h);
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+/////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
+////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+
+$(window).resize(function() {
+    if (window.matchMedia("(min-width: 400px)").matches) {
+    resizeFacebook("350px", "500px");
+    $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+  } if (window.matchMedia("(max-width: 400px)").matches) {
+    resizeFacebook("250px", "500px");
+    $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+  } if (window.matchMedia("(min-width: 600px)").matches) {
+    resizeFacebook("500px", "900px");
+    $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+  } if (window.matchMedia("(max-width: 600px)").matches) {
+    resizeFacebook("250px", "500px");
+    $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+  }
+  FB.XFBML.parse();
+});  
+
+/*/////////////////////////////////////////////////////////////////////////////
+/////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
+////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
+////////////////////////////////////////////////////////////////////////////*/
