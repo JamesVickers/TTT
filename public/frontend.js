@@ -86,3 +86,43 @@ $(".work-link-img")
   });
   */
 
+function resizeFacebook(w, h) {
+  $(".facebook-container").css("width", w);
+  $(".facebook-container").css("height", h);
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+/////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
+////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+
+$(window).on('load resize', function () {
+  var width;
+  var height;
+  var small = window.matchMedia("(max-width: 440px)").matches;
+  var medium = window.matchMedia("(max-width: 600px)").matches;
+  var large = window.matchMedia("(min-width: 600px)").matches;
+
+  if(small) {
+    //alert("small!");
+    width = "250px";
+    height = "500px";
+  } else if(medium) {
+    //alert("medium!");
+    width = "360px";
+    height = "500px";
+  } else if(large) {
+    //alert("large!");
+    width = "500px";
+    height = "900px";
+  }
+ 
+  resizeFacebook(width, height);
+  $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+  FB.XFBML.parse();
+});  
+
+/*/////////////////////////////////////////////////////////////////////////////
+/////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
+////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
+////////////////////////////////////////////////////////////////////////////*/
