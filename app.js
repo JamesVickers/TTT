@@ -7,6 +7,12 @@ const ObjectID = require('mongodb').ObjectID;
 const mongoose = require("mongoose");
 const db = mongoose.connection;
 
+const cloudinary = require('cloudinary').v2;
+cloudinary.config({ 
+  cloud_name: 'dtq0sudxq', 
+  api_key: '729278569448928', 
+  api_secret: 'klJh4a5F6PvXM3DJrYohuilJzdg' 
+});
 
 // set location for static files like .css
 app.use(express.static(__dirname + "/public"));
@@ -102,7 +108,6 @@ app.get('/blog', (req, res) => {
   })
 });
 
-
 app.get('/blog/:id', async (req, res) => {
 
   let id = ObjectID(req.params.id);
@@ -117,11 +122,20 @@ app.get('/blog/:id', async (req, res) => {
   });
 });
 
-
-
 // news page
 app.get("/news", function(req, res) {
-  res.render("pages/news");
+  //cloudinary for news page
+  let newsImages = [];
+  for(var i = 1; i < 7; i++) {
+    newsImages.push("news_" + i + ".jpg");
+  }
+  let newsUrls = [];
+  newsImages.forEach(function(image){
+    newsUrls.push(cloudinary.image(image));
+  });
+  //let news1 = cloudinary.image("news_1.jpg");
+  //console.log(news1);
+  res.render("pages/news", { newsUrls});
 });
 
 /* Enquiry form ///////////////////////////////////////////////////////////////////////////*/

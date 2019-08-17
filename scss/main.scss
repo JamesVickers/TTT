@@ -305,8 +305,27 @@ main p {
   transform: scale(1.1);
 }
 
+.stand-out-content-div h3 {
+ text-align: center;
+}
+
 .stand-out-content-div a {
   padding: 30px;
+}
+
+.blog-title {
+  width: 95%;
+  max-width: 550px;
+}
+
+.blog-title .stand-out-content-div {
+  width: 100%;
+  margin: 40px 0;
+}
+
+
+.blog-title:hover {
+  color: $color-secondary;
 }
 
 /*example work images /////////////////*/
@@ -356,7 +375,8 @@ main p {
   margin: 0 auto;
 }
 
-.work-text a {
+.work-text a,
+.blog-title {
   text-decoration: none;
   color: $color-dark;
 }
@@ -385,7 +405,6 @@ main p {
 
 .fleelance-ul {
   width: 80%;
- 
   margin-bottom: 0;
 }
 
@@ -410,7 +429,7 @@ main p {
   justify-content: center;
 }
 
-.stand-out-content-div {
+.stand-out-content-div,{
   align-items: center;
   width: 95%;
   max-width: 550px;
@@ -539,8 +558,18 @@ button[type="submit"]:hover {
 
 /* news page css ////////////////////////////////////////////////////////////////////////*/
 
-.facebook-container {
-  margin-top: 50px;
+.news-img-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-img-ul li {
+  margin-top: 50px; 
+}
+
+.news-img-ul li img {
+  width: 240px;
+  height: 240px;
 }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
@@ -610,6 +639,13 @@ footer ul {
 
   form {
     width: 80%;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .news-img-ul li img {
+    width: 360px;
+    height: 360px;
   }
 }
 
@@ -765,6 +801,13 @@ footer ul {
   .banner-headline {
     top: 85%;
     left: 10%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .news-img-ul li img {
+    width: 450px;
+    height: 450px;
   }
 }
 

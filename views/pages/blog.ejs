@@ -26,15 +26,15 @@
       />
 
       <% blogPosts.forEach(function(blog){ %>
+        <a class="blog-title" href="/blog/<%= blog._id %>"> 
         <div 
         class="stand-out-content-div blur-focus" 
         tabindex="0">
           <h3>
-            <a href="/blog/<%= blog._id %>">
-              <%= blog.title %>
-            </a>
+            <%= blog.title %>
           </h3>
         </div>
+        </a>
       <% }) %>
     
     </main>
