@@ -9,6 +9,10 @@ $color-white: #ffffff;
 
 /* Main styles ///////////////////////////////////////////////////////////////////////////*/
 
+ul {
+  padding-left: 20px;
+}
+
 @font-face {
   font-family: title-font;
   src: url("../fonts/Vattican.ttf");
