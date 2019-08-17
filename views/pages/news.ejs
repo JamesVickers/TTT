@@ -6,6 +6,7 @@
 
   <body>
       <div id="fb-root"></div>
+      <!-- following src changed from sdk.js to all.js to fix loading bug -->
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
 
     <header>
@@ -28,6 +29,26 @@
         aria-hidden="true"
       />
 
+      <p tabindex="0" class="blur-focus">
+        We add new posts to the Treetops Tech Facebook page every week.
+        Follow our page to keep up to date with all our latest news.
+      </p>
+      <p tabindex="0" class="blur-focus">
+        Follow our page to keep up to date with all our latest news.
+      </p>
+      <p tabindex="0" class="blur-focus">
+        Or simply scroll through the stream below.
+      </p>
+
+      <div id="first-spacing-div" class="spacing-div">
+        <img
+          class=""
+          src="/img/hex-falling-line-left.png"
+          alt="hexagonal pattern in background in the center of the screen"
+          aria-hidden="true"
+        />
+      </div>
+
       <div class="facebook-container">
         <div 
           class="fb-page" 
@@ -44,7 +65,6 @@
           </blockquote>
         </div>
       </div>
-
       
     </main>
 

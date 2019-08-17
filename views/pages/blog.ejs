@@ -25,17 +25,17 @@
         aria-hidden="true"
       />
 
-      <ul>
-            <% blogPosts.forEach(function(blog){ %>
-          <li>
-              <h3>
-                <a href="/blog/<%= blog._id %>">
-                  <%= blog.title %>
-                </a>
-              </h3>
-          </li>
-            <% }) %>
-      </ul>
+      <% blogPosts.forEach(function(blog){ %>
+        <div 
+        class="stand-out-content-div blur-focus" 
+        tabindex="0">
+          <h3>
+            <a href="/blog/<%= blog._id %>">
+              <%= blog.title %>
+            </a>
+          </h3>
+        </div>
+      <% }) %>
     
     </main>
 

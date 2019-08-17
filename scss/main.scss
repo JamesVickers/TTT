@@ -308,6 +308,7 @@ main p {
 .stand-out-content-div a {
   padding: 30px;
 }
+
 /*example work images /////////////////*/
 #bochi-bochi-img {
   background-image: url("../img/bochi-bochi-img-mobile-single.png");
@@ -418,13 +419,18 @@ main p {
   flex-direction: column;
   background-color: $color-white;
   /*background-image: url("/img/hexellence.png");*/
-  border-radius: 5%;
+  border-radius: 10px;
   margin: 40px auto;
 }
 
 .stand-out-content-div h3 {
   max-width: 80%;
   margin: 30px 0 30px 0;
+}
+
+.stand-out-content-div h3 a {
+  color: $color-dark;
+  text-decoration: none;
 }
 
 .stand-out-content-div img {
@@ -531,9 +537,11 @@ button[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-/* news page css /////////////////////////////////////////////////////////////////////*/
+/* news page css ////////////////////////////////////////////////////////////////////////*/
 
-
+.facebook-container {
+  margin-top: 50px;
+}
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 
