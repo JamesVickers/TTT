@@ -23,28 +23,25 @@ $("#closeMenu").on("click", function() {
   hideModal();
 });
 
-
-
 // only show focus on keyboard events (tabbing for a11y), not for mouse click events
 
 //on click, if element has a tab index and if event is a click, blur focus
 
 let mouseDown = false;
 
-$(".blur-focus").on('mousedown', () => {
+$(".blur-focus").on("mousedown", () => {
   mouseDown = true;
 });
 
-$(".blur-focus").on('mouseup', () => {
+$(".blur-focus").on("mouseup", () => {
   mouseDown = false;
 });
 
-$(".blur-focus").on('focus', (event) => {
+$(".blur-focus").on("focus", event => {
   if (mouseDown) {
     event.target.blur();
   }
 });
-
 
 //hide modal automatically if window is resized > 700px
 $(window).resize(function() {
@@ -96,7 +93,7 @@ function resizeFacebook(w, h) {
 ////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
 
-$(window).on('load resize', function () {
+/*$(window).on('load resize', function () {
   var width;
   var height;
   var small = window.matchMedia("(max-width: 440px)").matches;
@@ -120,7 +117,7 @@ $(window).on('load resize', function () {
   resizeFacebook(width, height);
   $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
   FB.XFBML.parse();
-});  
+});  */
 
 /*/////////////////////////////////////////////////////////////////////////////
 /////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
