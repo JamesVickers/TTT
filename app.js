@@ -1,17 +1,22 @@
+//////To allow contact form code to fire on HV PC/////
+if (process.env.NODE_ENV !== "production") {
+  process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+}
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
-const mongo = require('mongodb');
-const ObjectID = require('mongodb').ObjectID;
+const mongo = require("mongodb");
+const ObjectID = require("mongodb").ObjectID;
 const mongoose = require("mongoose");
 const db = mongoose.connection;
 
-const cloudinary = require('cloudinary').v2;
-cloudinary.config({ 
-  cloud_name: 'dtq0sudxq', 
-  api_key: '729278569448928', 
-  api_secret: 'klJh4a5F6PvXM3DJrYohuilJzdg' 
+const cloudinary = require("cloudinary").v2;
+cloudinary.config({
+  cloud_name: "dtq0sudxq",
+  api_key: "729278569448928",
+  api_secret: "klJh4a5F6PvXM3DJrYohuilJzdg"
 });
 
 // set location for static files like .css
@@ -73,51 +78,45 @@ app.get("/contact", function(req, res) {
   res.render("pages/contact");
 });
 
-
-
 //Set up default mongoose connection
-var mongoDB = 'mongodb://localhost:27017/TTT';
+var mongoDB = "mongodb://localhost:27017/TTT";
 //var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
 
 mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
-mongoose.connection.on('error', console.error.bind(console, 'Mongo error:'));
+mongoose.connection.on("error", console.error.bind(console, "Mongo error:"));
 
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
 
 //Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 //Added the following 'mongoose.set' to remove this console warning:
 //(node:3916) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 //mongoose.set('useCreateIndex', true)
 
-
-
 // blog page
-app.get('/blog', (req, res) => {
-
+app.get("/blog", (req, res) => {
   //pass in title of blog post on request object. Use to filter db result. Pass back result
   //the blog page queries db for all results and passes results to blog.ejs in 'blogPosts' variable
-  db.collection('blogPosts')
-  .find()
-  .toArray((err, result) => {
-    if (err) return console.log(err)
-    // else renders list.ejs
-    res.render('pages/blog', {blogPosts: result})
-  })
+  db.collection("blogPosts")
+    .find()
+    .toArray((err, result) => {
+      if (err) return console.log(err);
+      // else renders list.ejs
+      res.render("pages/blog", { blogPosts: result });
+    });
 });
 
-app.get('/blog/:id', async (req, res) => {
-
+app.get("/blog/:id", async (req, res) => {
   let id = ObjectID(req.params.id);
-  let blogCollection = await db.collection('blogPosts');
+  let blogCollection = await db.collection("blogPosts");
 
-  blogCollection.findOne({ _id : id }, (err, result) => {
+  blogCollection.findOne({ _id: id }, (err, result) => {
     if (err) {
       console.log("failed blog id page");
     } else {
-      res.render('pages/singlePost', { singlePost: result })
+      res.render("pages/singlePost", { singlePost: result });
     }
   });
 });
@@ -126,35 +125,44 @@ app.get('/blog/:id', async (req, res) => {
 app.get("/news", function(req, res) {
   //cloudinary for news page
   let newsImages = [];
-  for(var i = 1; i < 7; i++) {
+  for (var i = 1; i < 7; i++) {
     newsImages.push("news_" + i + ".jpg");
   }
   let newsUrls = [];
-  newsImages.forEach(function(image){
+  newsImages.forEach(function(image) {
     newsUrls.push(cloudinary.image(image));
   });
   //let news1 = cloudinary.image("news_1.jpg");
   //console.log(news1);
-  res.render("pages/news", { newsUrls});
+  res.render("pages/news", { newsUrls });
 });
 
 /* Enquiry form ///////////////////////////////////////////////////////////////////////////*/
 app.post("/send", (req, res) => {
+  //strip HTML special characters from form input. Consent not sanitized as not a string
+  function sanitizeInput(input) {
+    if (input) {
+      const sanitizedOutput = input.replace(/(<([^>]+)>)/gi, "");
+      return sanitizedOutput;
+    } else {
+      console.log("no input");
+    }
+  }
+
   async function sendEmail() {
     const output = `
         <p>You have a new contact message</p>
         <h3>Contact Details</h3>
         <ul>
-            <li>Name: ${req.body.name}</li>
-            <li>Company: ${req.body.company}</li>
-            <li>Email: ${req.body.email}</li>
-            <li>Telephone: ${req.body.telephone}</li>
+            <li>Name: ${sanitizeInput(req.body.name)}</li>
+            <li>Company: ${sanitizeInput(req.body.company)}</li>
+            <li>Email: ${sanitizeInput(req.body.email)}</li>
+            <li>Telephone: ${sanitizeInput(req.body.telephone)}</li>
             <li>Consent: ${req.body.consent}</li>
         </ul>
         <h3>Message</h3>
-        <p>${req.body.message}</p>
+        <p>${sanitizeInput(req.body.message)}</p>
         `;
-        
 
     // youremailprogram.js
     const nodemailer = require("nodemailer");
@@ -199,13 +207,18 @@ app.post("/send", (req, res) => {
     };
 
     smtpTransport.sendMail(mailOptions, (error, response) => {
-      error ? console.log(error) : console.log('Form submitted');
+      error ? console.log(error) : console.log("Form submitted");
       smtpTransport.close();
     });
   } // That last brace is to close off our async function
 
-  sendEmail();
-  res.render("pages/thank-you");
+  //only continue if consent given, else raise error
+  if (req.body.consent) {
+    sendEmail();
+    res.render("pages/thank-you");
+  } else {
+    console.log("no consent given");
+  }
 });
 
 /* MongoDB ///////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -269,7 +282,6 @@ app.post('/exit', (req, res) => {
 });
 
 */
-
 
 // listen on port 3000
 app.listen(process.env.port || 3000);
