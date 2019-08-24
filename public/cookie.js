@@ -1,17 +1,18 @@
 var config = {
   //test key and product type - change before going live
-  apiKey: "592b99ebdf88c091dad9b556b6d8de236ac97687",
-  product: "PRO_MULTISITE",
+  // apiKey: "592b99ebdf88c091dad9b556b6d8de236ac97687",
+  // product: "PRO_MULTISITE",
   //production key linked to treetops.tech
-  //apiKey: "4153d1360fba91f35447d9683780224125883891",
+  apiKey: "4153d1360fba91f35447d9683780224125883891",
   //production product type
-  //product: "COMMUNITY",
+  product: "COMMUNITY",
 
   optionalCookies: [
     {
       name: "analytics",
       label: "Analytics",
-      description: "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
+      description:
+        "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
       cookies: ["_ga", "_gid", "_gat"],
       logConsent: false,
       onAccept: function() {
