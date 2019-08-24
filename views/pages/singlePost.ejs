@@ -11,34 +11,20 @@
 
     <main id="main-content">
       <div class="banner-div">
-        <img class="banner-img" 
-             src="/img/book-1200-blue.png" 
-             alt="close up of an open book on grass"
-             aria-hidden="true" />
+        <img class="banner-img" src="/img/book-1200-blue.png" alt="close up of an open book on grass" aria-hidden="true" />
         <h2 class="banner-headline" tabindex="0" class="blur-focus">Blog</h2>
       </div>
 
-      <img
-        class="scroll-icon"
-        src="/img/scroll-icon-opacity40.png"
-        alt="Icon directing the user to scroll down the page"
-        aria-hidden="true"
-      />
+      <img class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="Icon directing the user to scroll down the page" aria-hidden="true" />
 
       <h3><%- singlePost.title %></h3>
       <p><%- singlePost.mainContent %></p>
-      <p><%- singlePost.created %></p>
+      <p><%- singlePost.created.toDateString() %></p>
       <p><%- singlePost.author %></p>
 
       <div id="first-spacing-div" class="spacing-div">
-          <img
-            class=""
-            src="/img/hex-falling-line-left.png"
-            alt="hexagonal pattern in background in the center of the screen"
-            aria-hidden="true"
-          />
-        </div>
-      
+        <img class="" src="/img/hex-falling-line-left.png" alt="hexagonal pattern in background in the center of the screen" aria-hidden="true" />
+      </div>
     </main>
 
     <footer id="footer">

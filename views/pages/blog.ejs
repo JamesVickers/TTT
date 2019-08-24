@@ -11,32 +11,21 @@
 
     <main id="main-content">
       <div class="banner-div">
-        <img class="banner-img" 
-             src="/img/book-1200-blue.png" 
-             alt="close up of an open book on grass"
-             aria-hidden="true" />
+        <img class="banner-img" src="/img/book-1200-blue.png" alt="close up of an open book on grass" aria-hidden="true" />
         <h2 class="banner-headline" tabindex="0" class="blur-focus">Blog</h2>
       </div>
 
-      <img
-        class="scroll-icon"
-        src="/img/scroll-icon-opacity40.png"
-        alt="Icon directing the user to scroll down the page"
-        aria-hidden="true"
-      />
+      <img class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="Icon directing the user to scroll down the page" aria-hidden="true" />
 
       <% blogPosts.forEach(function(blog){ %>
-        <a class="blog-title" href="/blog/<%= blog._id %>"> 
-        <div 
-        class="stand-out-content-div blur-focus" 
-        tabindex="0">
+      <a class="blog-title" href="/blog/<%= blog._id %>">
+        <div class="stand-out-content-div blur-focus" tabindex="0">
           <h3>
             <%= blog.title %>
           </h3>
         </div>
-        </a>
+      </a>
       <% }) %>
-    
     </main>
 
     <footer id="footer">

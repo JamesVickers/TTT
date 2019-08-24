@@ -177,8 +177,7 @@ app.post("/send", (req, res) => {
     );
 
     oauth2Client.setCredentials({
-      refresh_token:
-        "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
+      refresh_token: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_"
     });
     const tokens = await oauth2Client.getAccessToken;
     //const accessToken = tokens.credentials.access_token;
@@ -189,11 +188,9 @@ app.post("/send", (req, res) => {
       auth: {
         type: "OAuth2",
         user: "jvickersdesign@gmail.com",
-        clientId:
-          "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
+        clientId: "525798945078-jnjdtgm79denmdgce0qvc7itjrguilnl.apps.googleusercontent.com",
         clientSecret: "oxB9q4kbBA_WMgO8h11cYTkW",
-        refreshToken:
-          "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_",
+        refreshToken: "1/7JFLOqrcA9hpYTQ_pTw5DIL9wsWtjZVVh1c_VKRdlXx1Rb0eL_VhZcgDJamF_SO_",
         accessToken: accessToken
       }
     });
