@@ -221,7 +221,8 @@ main {
 .scroll-icon {
   margin-bottom: 30px; }
 
-main p {
+main p,
+main ul {
   width: 95%;
   max-width: 550px; }
 
@@ -416,7 +417,7 @@ form textarea {
 form textarea {
   resize: none; }
 
-form input[type=checkbox] {
+form input[type="checkbox"] {
   width: 40px;
   height: 40px; }
 
@@ -479,7 +480,8 @@ footer ul {
   background-color: #383838;
   color: #efefef; }
 
-.fa:hover, .fa:focus {
+.fa:hover,
+.fa:focus {
   background-color: #cfcfcf;
   color: #383838; }
 
@@ -529,7 +531,8 @@ footer ul {
     font-size: 1.3em; }
   .main-title-div h2 {
     width: 250px; }
-  main p {
+  main p,
+  main ul {
     width: 90%; }
   .profile-img {
     width: 179px;
@@ -557,7 +560,8 @@ footer ul {
   }*/ }
 
 @media screen and (min-width: 650px) {
-  main p {
+  main p,
+  main ul {
     width: 80%; }
   .stand-out-content-div {
     width: 80%; } }

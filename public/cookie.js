@@ -6,20 +6,34 @@ var config = {
   //apiKey: "4153d1360fba91f35447d9683780224125883891",
   //production product type
   //product: "COMMUNITY",
+
   optionalCookies: [
     {
       name: "analytics",
       label: "Analytics",
-      description: "",
-      cookies: [],
+      description: "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
+      cookies: ["_ga", "_gid", "_gat"],
       logConsent: false,
-      onAccept: function() {},
-      onRevoke: function() {}
-    },
-    {
+      onAccept: function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-142712964-1");
+        // End Google Analytics
+      },
+      onRevoke: function() {
+        // Disable Google Analytics
+        window["ga-disable-UA-142712964-1"] = true;
+        // End Google Analytics
+      }
+    }
+    /*,{
       name: "marketing",
       label: "Marketing",
-      description: "",
+      description: "We use marketing cookies to help us improve the relevancy of advertising campaigns you receive.",
       cookies: [],
       logConsent: false,
       onAccept: function() {},
@@ -33,10 +47,10 @@ var config = {
       logConsent: false,
       onAccept: function() {},
       onRevoke: function() {}
-    }
+    }*/
   ],
 
-  position: "RIGHT",
+  position: "LEFT",
   theme: "DARK"
 };
 
