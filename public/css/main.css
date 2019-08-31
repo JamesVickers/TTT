@@ -466,6 +466,9 @@ button[type="submit"]:hover {
 .thank-you {
   margin-bottom: 20px; }
 
+.privacy-policy-content p:first-of-type {
+  margin-top: 30px; }
+
 /* news page css ////////////////////////////////////////////////////////////////////////*/
 .news-img-ul {
   list-style-type: none;
