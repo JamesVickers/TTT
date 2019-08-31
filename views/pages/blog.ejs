@@ -15,7 +15,7 @@
         <h2 class="banner-headline" tabindex="0" class="blur-focus">Blog</h2>
       </div>
 
-      <img class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="Icon directing the user to scroll down the page" aria-hidden="true" />
+      <img id="blogListStart" class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="Icon directing the user to scroll down the page" aria-hidden="true" />
 
       <% blogPosts.forEach(function(blog){ %>
       <a class="blog-title" href="/blog/<%= blog._id %>">
