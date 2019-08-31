@@ -277,7 +277,8 @@ main {
 }
 
 main p,
-main ul {
+main ul,
+.news-img-ul li img {
   width: 95%;
   max-width: 550px;
 }
@@ -561,15 +562,11 @@ button[type="submit"]:hover {
 .news-img-ul {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 .news-img-ul li {
   margin-top: 50px;
-}
-
-.news-img-ul li img {
-  width: 240px;
-  height: 240px;
 }
 
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
@@ -612,6 +609,7 @@ footer ul {
     display: none;
   }
 }
+
 @media screen and (min-width: 400px) {
   body {
     font-size: 1.1em;
@@ -640,13 +638,6 @@ footer ul {
 
   form {
     width: 80%;
-  }
-}
-
-@media screen and (min-width: 440px) {
-  .news-img-ul li img {
-    width: 360px;
-    height: 360px;
   }
 }
 
@@ -680,7 +671,8 @@ footer ul {
   }
 
   main p,
-  main ul {
+  main ul,
+  .news-img-ul li img {
     width: 90%;
   }
 
@@ -716,16 +708,12 @@ footer ul {
   #applications-img {
     background-image: url("../img/regapp-tablet.png");
   }
-
-  /*.work-img {
-    min-width: 400px;
-    min-height: 300px;
-  }*/
 }
 
 @media screen and (min-width: 650px) {
   main p,
-  main ul {
+  main ul,
+  .news-img-ul li img {
     width: 80%;
   }
   .stand-out-content-div {
@@ -804,13 +792,6 @@ footer ul {
   .banner-headline {
     top: 85%;
     left: 10%;
-  }
-}
-
-@media screen and (min-width: 950px) {
-  .news-img-ul li img {
-    width: 450px;
-    height: 450px;
   }
 }
 
