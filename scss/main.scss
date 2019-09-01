@@ -331,18 +331,6 @@ main ul,
   color: $color-secondary;
 }
 
-/*
-.link-to-blog-list {
-  font-family: "Abel", sans-serif;
-  text-decoration: none;
-  width: 100%;
-}
-
-.link-to-blog-list {
-  margin: 0 auto;
-}
-*/
-
 /*example work images /////////////////*/
 #bochi-bochi-img {
   background-image: url("../img/bochi-bochi-img-mobile-single.png");
@@ -501,6 +489,10 @@ main ul,
 
 #freelance-stand-out-div p:first-of-type {
   margin: 40px auto 0 auto;
+}
+
+.freelance-title {
+  width: 60%;
 }
 
 /* contact form css //////////////////////////////////////////////////////////////////*/
