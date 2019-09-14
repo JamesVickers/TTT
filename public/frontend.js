@@ -1,4 +1,3 @@
-//alert("hello");
 function showModal() {
   $(".mobile-nav-modal")
     .removeClass("modal-hide")
