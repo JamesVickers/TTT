@@ -111,6 +111,10 @@ header {
   width: 71px;
 }
 
+.desktop-header img:hover {
+  cursor: pointer;
+}
+
 .desktop-nav-ul-left,
 .desktop-nav-ul-right {
   display: none;
