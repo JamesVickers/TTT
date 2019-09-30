@@ -83,6 +83,11 @@ app.get("/privacy", function(req, res) {
   res.render("pages/privacy");
 });
 
+// referral agreement page
+app.get("/referral", function(req, res) {
+  res.render("pages/referral");
+});
+
 //Set up default mongoose connection
 var mongoDB = "mongodb://localhost:27017/TTT";
 //var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
