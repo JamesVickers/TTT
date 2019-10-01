@@ -473,6 +473,13 @@ button[type="submit"]:hover {
 .news-img-ul li {
   margin-top: 50px; }
 
+/* referral page css ////////////////////////////////////////////////////////////////////*/
+a.referral-link {
+  color: #8cd4ff; }
+
+a.referral-link:hover {
+  color: #ffe000; }
+
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
   flex-shrink: 0;

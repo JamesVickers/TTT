@@ -591,6 +591,16 @@ button[type="submit"]:hover {
   margin-top: 50px;
 }
 
+/* referral page css ////////////////////////////////////////////////////////////////////*/
+
+a.referral-link {
+  color: $color-secondary;
+}
+
+a.referral-link:hover {
+  color: $color-primary;
+}
+
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 
 footer {
