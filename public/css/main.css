@@ -256,9 +256,9 @@ main ul,
 .stand-out-content-div a {
   padding: 30px; }
 
-.blog-title {
-  width: 95%;
-  max-width: 550px; }
+.back-to-top {
+  width: 100%;
+  margin: 40px 0; }
 
 .blog-title .stand-out-content-div {
   width: 100%;
@@ -483,13 +483,22 @@ a.referral-link:hover {
 /* footer css ///////////////////////////////////////////////////////////////////////////*/
 footer {
   flex-shrink: 0;
-  margin-top: 100px; }
+  margin-top: 0px; }
 
 footer ul {
   width: 90%;
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
   padding: 40px 0;
   border-top: solid 1.5px #cfcfcf; }
+
+footer a {
+  color: #383838;
+  text-decoration: none;
+  width: 550px;
+  max-width: 550px; }
+
+footer a:hover {
+  color: #8cd4ff; }
 
 .fa {
   padding: 5px;
