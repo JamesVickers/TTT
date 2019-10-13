@@ -11,14 +11,28 @@
 
     <main id="main-content">
       <div class="banner-div">
-        <img class="banner-img" src="/img/book-1200-blue.png" alt="close up of an open book on grass" aria-hidden="true" />
-        <h2 class="banner-headline" tabindex="0" class="blur-focus">Articles</h2>
+        <img
+          class="banner-img"
+          src="/img/book-1200-blue.png"
+          alt="close up of an open book on grass"
+          aria-hidden="true"
+        />
+        <h2 class="banner-headline" tabindex="0" class="blur-focus">
+          Articles
+        </h2>
       </div>
 
-      <img id="blogListStart" class="scroll-icon" src="/img/scroll-icon-opacity40.png" alt="Icon directing the user to scroll down the page" aria-hidden="true" />
+      <img
+        id="blogListStart"
+        class="scroll-icon"
+        src="/img/scroll-icon-opacity40.png"
+        alt="Icon directing the user to scroll down the page"
+        aria-hidden="true"
+      />
 
       <p>
-        Click on one of the titles below to read the full post. New articles added regularly for you to enjoy.
+        Click on one of the titles below to read the full post. New articles
+        added regularly for you to enjoy.
       </p>
 
       <% blogPosts.forEach(function(blog){ %>
@@ -29,7 +43,7 @@
           </h3>
         </div>
       </a>
-      <% }) %>
+      <% }) %> <% include ../partials/backtotop %>
     </main>
 
     <footer id="footer">
