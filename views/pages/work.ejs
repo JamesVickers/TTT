@@ -4,23 +4,25 @@
     <% include ../partials/head %>
   </head>
 
-  <body>
+  <body id="top-of-page">
     <header>
       <% include ../partials/header %>
     </header>
 
     <main id="main-content">
       <div class="banner-div">
-        <img class="banner-img" 
-             src="/img/grass-1200-blue.png" 
-             alt="close up of grass" 
-             aria-hidden="true"/>
+        <img
+          class="banner-img"
+          src="/img/grass-1200-blue.png"
+          alt="close up of grass"
+          aria-hidden="true"
+        />
         <h2 class="banner-headline" tabindex="0" class="blur-focus">Work</h2>
       </div>
 
       <img
         class="scroll-icon"
-        src="/img/scroll-icon-opacity40.png" 
+        src="/img/scroll-icon-opacity40.png"
         alt="Icon directing the user to scroll down the page"
         aria-hidden="true"
       />
@@ -75,6 +77,7 @@
           </a>
         </div>
       </div>
+      <% include ../partials/backtotop %>
     </main>
 
     <footer id="footer">
