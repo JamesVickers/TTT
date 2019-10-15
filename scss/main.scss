@@ -320,9 +320,9 @@ main ul,
   padding: 30px;
 }
 
-.back-to-top {
-  width: 100%;
-  margin: 40px 0;
+.blog-title {
+  width: 95%;
+  max-width: 550px;
 }
 
 .blog-title .stand-out-content-div {
@@ -499,6 +499,11 @@ main ul,
   width: 60%;
 }
 
+/* pricing div ///////////////////////////////////////////////////////////////////////*/
+.website-pricing p {
+  margin-top: 30px;
+}
+
 /* contact form css //////////////////////////////////////////////////////////////////*/
 
 form {
@@ -555,7 +560,17 @@ form input::placeholder {
   color: $color-primary;
 }
 
-button[type="submit"] {
+a.back-to-top-button {
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+a.back-to-top-button h3 {
+  margin: 0;
+}
+
+button[type="submit"],
+.back-to-top-button {
   display: block;
   margin: 10px auto 30px auto;
   padding: 15px;
@@ -567,7 +582,9 @@ button[type="submit"] {
 }
 
 button[type="submit"]:focus,
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.back-to-top-button:focus,
+.back-to-top-button:hover {
   background-color: $color-primary;
 }
 

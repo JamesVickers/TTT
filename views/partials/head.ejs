@@ -4,6 +4,17 @@
   src="https://www.googletagmanager.com/gtag/js?id=UA-142712964-1"
 ></script>
 
+<!-- gtag configured to anonymise IP for GDPR compliance-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-142712964-1", { anonymize_ip: true });
+</script>
+
 <!-- Civic cookie control-->
 <script src="https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js"></script>
 <script src="/cookie.js"></script>
@@ -23,6 +34,17 @@
     r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
     a.appendChild(r);
   })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+</script>
+
+<!-- Structured data object: tells Google which image to use as logo on search -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Treetops Tech",
+    "url": "https://www.treetops.tech",
+    "logo": "https://treetops.tech/img/TTT_header_logo.svg"
+  }
 </script>
 
 <meta charset="utf-8" />
