@@ -68,6 +68,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  border: solid 2px $color-light;
+  padding: 30px;
+  background: rgba(94, 94, 94, 0.8);
 }
 
 .main-title-div h1 {
@@ -88,9 +91,19 @@ body {
   margin-top: 15px;
 }
 
-.hex-index-div {
-  display: flex;
-  justify-content: space-between;
+#videoBG {
+  filter: grayscale(0) opacity(1);
+  position: fixed;
+  z-index: -1;
+  /*not work if the screen ratio is below 16/9*/
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  #videoBG {
+    display: none;
+  }
 }
 
 /* Header css ///////////////////////////////////////////////////////////////////////*/
@@ -248,7 +261,7 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 60px auto 0 auto;
+  margin: 40px auto 0 auto;
   width: 90%;
   flex-grow: 1;
   display: flex;
