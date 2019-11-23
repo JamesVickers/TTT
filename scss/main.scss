@@ -66,15 +66,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+  background: rgba(239, 239, 239, 0.8);
+  border-radius: 20px;
 }
 
 .main-title-div h1 {
   font-family: "title-font";
   font-size: 3.8em;
   color: $color-dark;
-  text-shadow: 2px 2px 0px rgba($color-primary, 0.8);
+  text-shadow: 2px 2px 0px $color-primary;
   text-align: center;
   margin: 0;
   margin-bottom: 10px;
@@ -82,26 +82,59 @@ body {
 
 .main-title-div h2 {
   font-family: "Abel", sans-serif;
-  font-size: 1.2em;
   text-align: center;
-  width: 220px;
-  margin-top: 15px;
+  margin-top: 0;
 }
 
-.hex-index-div {
-  display: flex;
-  justify-content: space-between;
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  filter: grayscale(1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  // width: 100%;
+  // height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .main-title-div {
+    padding: 40px;
+    border: solid 3px $color-primary;
+  }
 }
 
 /* Header css ///////////////////////////////////////////////////////////////////////*/
 
 header {
-  margin-top: 30px;
+  background: rgba(239, 239, 239, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.index-page-desktop-header {
+  font-weight: bold;
 }
 
 .desktop-header {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
 }
@@ -248,11 +281,12 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 60px auto 0 auto;
+  margin: 20px auto;
   width: 90%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .banner-div {
@@ -627,7 +661,7 @@ footer {
 
 footer ul {
   width: 90%;
-  margin: 80px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 40px 0;
   border-top: solid 1.5px $color-medium;
 }
@@ -709,7 +743,6 @@ footer a:hover {
   .main-title-div h1 {
     font-size: 5em;
   }
-
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-size: 1.2em;
@@ -729,11 +762,6 @@ footer a:hover {
   h3 {
     font-size: 1.3em;
   }
-
-  .main-title-div h2 {
-    width: 250px;
-  }
-
   main p,
   main ul,
   .news-img-ul li img {
@@ -842,17 +870,15 @@ footer a:hover {
 }
 
 @media screen and (min-width: 850px) {
+  .main-title-div h2 {
+    margin-top: 15px;
+  }
   .treetops-name-div {
     display: flex;
   }
   .treetops-name-div h1:first-of-type {
     margin-right: 25px;
   }
-
-  .main-title-div h2 {
-    width: 500px;
-  }
-
   .banner-headline {
     top: 85%;
     left: 10%;
@@ -872,15 +898,6 @@ footer a:hover {
 }
 
 @media screen and (min-width: 1260px) {
-  .main-title-div {
-    margin-top: 50px;
-  }
-
-  .main-title-div h2 {
-    font-size: 1.4em;
-    width: 600px;
-  }
-
   .desktop-nav-ul-left,
   .desktop-nav-ul-right {
     font-size: 1.3em;
