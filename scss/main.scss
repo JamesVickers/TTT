@@ -126,6 +126,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 200;
+  // box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
 .index-page-desktop-header {
@@ -798,7 +799,9 @@ footer a:hover {
   }
 
   #applications-img {
-    background-image: url("../img/regapp-tablet.png");
+    // background-image: url("../img/regapp-tablet.png");
+    background-image: url("../img/scp_desktop.png");
+    height: 597px;
   }
 }
 
@@ -856,11 +859,15 @@ footer a:hover {
   }
 
   #bochi-bochi-img {
-    background-image: url("../img/bochi-bochi2.png");
+    // background-image: url("../img/bochi-bochi2.png");
+    background-image: url("../img/bochi_bochi_desktop.png");
+    height: 597px;
   }
 
   #brewces-img {
-    background-image: url("../img/brewces2.png");
+    // background-image: url("../img/brewces2.png");
+    background-image: url("../img/brewces_desktop.png");
+    height: 597px;
   }
 
   //.work-img {
