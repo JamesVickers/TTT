@@ -100,11 +100,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 200;
-  box-shadow: 0 8px 6px -6px rgba(57, 63, 72, 0.3);
 }
 
-.index-page-desktop-header {
-  font-weight: bold;
+header.active {
+  box-shadow: 0 8px 6px -6px rgba(57, 63, 72, 0.3);
 }
 
 .desktop-header {
@@ -256,8 +255,7 @@ footer ul {
 
 main {
   align-items: center;
-  margin: 20px auto;
-  width: 90%;
+  width: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -309,6 +307,10 @@ main ul,
   justify-content: space-between;
 }
 
+.previous-next-button-div img {
+  margin: 20px;
+}
+
 .previous-next-button-div h2 {
   text-align: center;
   padding-right: 4px;
@@ -351,6 +353,8 @@ main ul,
 
 #brewces-img {
   background-image: url("../img/brewces-img-mobile-single.png");
+  width: 90%;
+  margin: 0 auto;
 }
 
 #applications-img {
@@ -366,7 +370,6 @@ main ul,
   //min-width: 150px;
   min-height: 300px;
   width: 85%;
-  margin-top: 50px;
 }
 
 .work-intro-text {
@@ -773,9 +776,7 @@ footer a:hover {
   }
 
   #applications-img {
-    // background-image: url("../img/regapp-tablet.png");
-    background-image: url("../img/scp_desktop.png");
-    height: 597px;
+    background-image: url("../img/regapp-tablet.png");
   }
 }
 
@@ -835,13 +836,13 @@ footer a:hover {
   #bochi-bochi-img {
     // background-image: url("../img/bochi-bochi2.png");
     background-image: url("../img/bochi_bochi_desktop.png");
-    height: 597px;
+    margin-bottom: 30px;
   }
 
   #brewces-img {
     // background-image: url("../img/brewces2.png");
     background-image: url("../img/brewces_desktop.png");
-    height: 597px;
+    margin-bottom: 30px;
   }
 
   //.work-img {

@@ -122,3 +122,12 @@ function resizeFacebook(w, h) {
 /////// THIS FIRES ON EVERY PAGE AND CAUSES CONSOLE ERRORS ////////////////////
 ////////////////// NEEDS FIXING SO ONLY FIRES ON NEWS PAGE ////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll > 0) {
+    $("header").addClass("active");
+  } else {
+    $("header").removeClass("active");
+  }
+});
