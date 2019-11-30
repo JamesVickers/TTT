@@ -66,8 +66,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(239, 239, 239, 0.8);
-  border-radius: 20px;
 }
 
 .main-title-div h1 {
@@ -82,41 +80,17 @@ body {
 
 .main-title-div h2 {
   font-family: "Abel", sans-serif;
+  color: $color-light;
   text-align: center;
   margin-top: 0;
 }
 
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
+.fullscreen-bg-img {
   z-index: -100;
-}
-
-.fullscreen-bg__video {
-  filter: grayscale(1);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  // width: 100%;
-  // height: 100%;
-  margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-  .fullscreen-bg__video {
-    display: none;
-  }
-}
-
-@media (min-width: 600px) {
-  .main-title-div {
-    padding: 40px;
-    border: solid 3px $color-primary;
-  }
+  position: fixed;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* Header css ///////////////////////////////////////////////////////////////////////*/
@@ -194,15 +168,15 @@ header {
 .modal-image-open {
   position: absolute;
   z-index: 200;
-  top: 50px;
+  top: 40px;
   right: 40px;
 }
 
 .modal-image-close {
   position: absolute;
   z-index: 200;
-  top: 32px;
-  right: 35px;
+  top: 39px;
+  right: 37px;
 }
 
 .modal-image-open:hover,
